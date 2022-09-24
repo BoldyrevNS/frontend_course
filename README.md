@@ -1,3 +1,3 @@
-# Ваш readme
+# Мой readme
 
-Укажите тематику
+Сайт Discors
