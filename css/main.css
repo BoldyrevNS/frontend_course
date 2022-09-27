@@ -3,15 +3,13 @@ html, body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
-nav.navbar{
+div.container-fluid{
     padding: 0;
     margin: 0;
     background-color: #0a53be;
 }
-div.navbar-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+nav.navbar{
+    padding: 0;
 }
 header nav ul {
     list-style: none;
@@ -25,10 +23,13 @@ ul.navbar-nav{
     margin: 0;
     padding: 0;
 }
-a.navbar-link{
+a.nav-link{
     text-decoration: none;
     font-size: large;
     color: white;
+}
+div.gallery-illust-container {
+    align-content: center;
 }
 li.navbar-item{
     margin: 10px;
@@ -36,11 +37,17 @@ li.navbar-item{
 header .logo img {
     width: 150px;
 }
+img.gallery-illust{
+    height: 200px;
+}
 footer{
     padding: 0;
     margin: 0;
     background-color: #0a53be;
     color: white;
     text-align: center;
+}
+main.main-content{
+    background-color: #013ba0;
 }
 
