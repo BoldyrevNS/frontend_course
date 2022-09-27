@@ -3,10 +3,19 @@ html, body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
+div .row{
+    margin-left: 0;
+    margin-right: 0;
+}
 div.container-fluid{
     padding: 0;
     margin: 0;
     background-color: #0a53be;
+}
+div.gallery-illust-container{
+    line-height: 1;
+    text-align: center;
+    background-color: #06357a;
 }
 nav.navbar{
     padding: 0;
@@ -28,12 +37,8 @@ a.nav-link{
     font-size: large;
     color: white;
 }
-div.gallery-illust-container {
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 10px;
-
+.main-content-gallery .gallery-illust-container img {
+    height: 200px;
 }
 li.navbar-item{
     margin: 10px;
@@ -50,9 +55,7 @@ figure.gallery-illust{
     width: 10%;
 }
 img.gallery-illust-img{
-    height: 200px;
-}
-img.gallery-illust{
+    max-width: 100%;
     height: 200px;
 }
 footer{
