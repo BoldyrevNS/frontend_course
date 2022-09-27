@@ -33,6 +33,7 @@ div.gallery-illust-container {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 10px;
+
 }
 li.navbar-item{
     margin: 10px;
@@ -49,6 +50,9 @@ figure.gallery-illust{
     width: 10%;
 }
 img.gallery-illust-img{
+    height: 200px;
+}
+img.gallery-illust{
     height: 200px;
 }
 footer{
