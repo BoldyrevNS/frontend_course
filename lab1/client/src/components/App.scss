@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+
+$mainFont: "Comfortaa", cursive;
+$orange: rgb(254, 167, 139);
+$green: rgb(101, 176, 84);
+$blue-green: rgb(66, 153, 143);
+$red: rgb(255, 122, 128);
+$dark: rgb(47, 49, 70);
+$brown: rgb(91, 54, 79);
+$light-grey-blue: rgb(135, 159, 197);
+$bej: rgb(252, 201, 146);
+$yellow: rgb(255, 215, 58);
+
+.App {
+    background-size: 100vw;
+    height: 100vh;
+    width: auto;
+    background-image: url("./img/wallp.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    display: flex;
+
+    &__container {
+        border: 2px solid rgb(165, 165, 165);
+        border-radius: 20px;
+        align-self: center;
+        margin: auto;
+        height: 87vh;
+        width: 87vw;
+        background-color: rgba(255, 255, 255, 0.7);
+        overflow: auto;
+
+        &__characters {
+            margin-top: 3%;
+        }
+
+        &__filteres {
+            margin-left: 5%;
+            button {
+                border: none;
+                border-radius: 10px;
+            }
+        }
+
+        .admin-btn {
+            font-size: small;
+            display: flex;
+            position: absolute;
+            font-family: $mainFont;
+            margin-top: -150px;
+        }
+
+        &__cards {
+            background-color: rgb(101, 176, 84, 0.7);
+            font-family: $mainFont;
+            border: 1px solid black;
+            border-radius: 20px;
+            width: 50%;
+            display: grid;
+            margin-left: 23vw;
+            justify-items: center;
+            text-align: center;
+
+            button {
+                border: none;
+                border-radius: 20px;
+                width: 90px;
+                height: auto;
+
+                img {
+                    width: 64px;
+                    height: auto;
+                }
+            }
+        }
+
+        &__place {
+            background-color: rgb(255, 122, 128, 0.7);
+            font-family: $mainFont;
+            border: 1px solid black;
+            border-radius: 20px;
+            width: 1100px;
+            display: grid;
+            justify-self: center;
+            margin-left: 23vw;
+            justify-items: center;
+            text-align: center;
+            margin-left: 320px;
+
+            .rightBtn,
+            .leftBtn {
+                border: none;
+                border-radius: 20px;
+                width: 90px;
+                height: auto;
+                margin-bottom: 50px;
+
+                img {
+                    width: 64px;
+                    height: auto;
+                }
+            }
+
+            .editplacebtn {
+                margin-top: 10px;
+                border: none;
+                border-radius: 20px;
+                width: 90px;
+                height: auto;
+            }
+        }
+
+        &__text {
+            margin: 15px;
+            font-family: $mainFont;
+            font-size: 24px;
+            color: rgb(165, 165, 165);
+            text-align: center;
+        }
+
+        &__category {
+            margin: 15px;
+            font-family: $mainFont;
+            font-size: 16px;
+            color: rgb(100, 100, 100);
+            text-align: center;
+
+            button {
+                border-radius: 5px;
+                margin: 7px;
+                border: none;
+                color: rgb(112, 111, 111);
+                background-color: rgba(255, 255, 255, 0.7);
+                padding: 3px;
+            }
+
+            button:hover {
+                color: white;
+            }
+
+            &__btn1:hover {
+                box-shadow: 0 0 0 2px white, 0 0 0 4px $orange;
+                background-color: $orange;
+            }
+
+            &__btn1:active {
+                box-shadow: 0 0 0 2px white, 0 0 0 4px $orange;
+                background-color: $orange;
+            }
+
+            &__btn2:hover {
+                box-shadow: 0 0 0 2px white, 0 0 0 4px $green;
+                background-color: $green;
+            }
+
+            &__btn3:hover {
+                box-shadow: 0 0 0 2px white, 0 0 0 4px $blue-green;
+                background-color: $blue-green;
+            }
+
+            &__btn4:hover {
+                box-shadow: 0 0 0 2px white, 0 0 0 4px $red;
+                background-color: $red;
+            }
+
+            &__btn5:hover {
+                box-shadow: 0 0 0 2px white, 0 0 0 4px $dark;
+                background-color: $dark;
+            }
+
+            &__btn6:hover {
+                box-shadow: 0 0 0 2px white, 0 0 0 4px $light-grey-blue;
+                background-color: $light-grey-blue;
+            }
+
+            &__btn7:hover {
+                box-shadow: 0 0 0 2px white, 0 0 0 4px $bej;
+                background-color: $bej;
+            }
+
+            &__btn8:hover {
+                box-shadow: 0 0 0 2px white, 0 0 0 4px $yellow;
+                background-color: $yellow;
+            }
+        }
+
+        &__characters {
+            @media screen and (min-width: 800px) and (max-width: 1500px) {
+                column-count: 2;
+                column-gap: 20px;
+            }
+            @media screen and (min-width: 1501px) {
+                column-count: 3;
+            }
+        }
+    }
+}

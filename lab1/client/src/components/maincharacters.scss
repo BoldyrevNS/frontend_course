@@ -1,0 +1,70 @@
+@import "App";
+
+.edit{
+    button{
+        width: 16px;
+        height: 16px;
+    }
+
+    .edit_img{
+        width: 16px;
+        height: auto;
+        padding: 0px;
+    }
+}
+
+.descript{
+    height: 150px;
+    width: 400px;
+    text-align: start;
+    word-wrap: break-word;
+    margin-right: 120px;
+    
+}
+
+.descript-all{
+    text-align: center;
+    word-wrap: break-word;
+    margin-right: 120px;
+    font-family: $mainFont;
+    margin-top: 2%;
+}
+
+.maindiv{
+    margin-top: -10px;
+}
+
+a:hover{
+    color: white !important;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.episode{
+    img{
+        width: 80%;
+    }
+}
+
+.search{
+    input{
+        padding: 6px;
+        position: absolute;
+        margin-left: 15vh;
+        font-family: $mainFont;
+        width: 220px;
+    }
+
+    button{
+        position: absolute;
+        margin-left: 380px
+    }
+}
+
+.inputEp{
+    width: 420px !important;
+    text-align: center;
+}
