@@ -29,15 +29,26 @@ a.nav-link{
     color: white;
 }
 div.gallery-illust-container {
-    align-content: center;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 10px;
 }
 li.navbar-item{
     margin: 10px;
 }
+ul.navbar-nav{
+    background-color: #0d6efd;
+}
 header .logo img {
     width: 150px;
+    margin-right: 10px;
 }
-img.gallery-illust{
+figure.gallery-illust{
+    text-align: center;
+    width: 10%;
+}
+img.gallery-illust-img{
     height: 200px;
 }
 footer{
