@@ -68,4 +68,26 @@ footer{
 main.main-content{
     background-color: #013ba0;
 }
-
+figcaption{
+    color: white;
+}
+form.search-field{
+    width: 100%;
+    padding: 10px;
+    background-color: royalblue;
+    display: inline-block;
+}
+input.search-bar{
+    width: 90%;
+    background-color: #06357a;
+    border-color: royalblue;
+    color: white;
+}
+button.search-bar-button{
+    width: 10%;
+    background-color: cyan;
+    border-color: royalblue;
+}
+label.search-bar-label{
+    color: white;
+}
