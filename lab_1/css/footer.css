@@ -1,0 +1,17 @@
+footer {
+    background-color:rgb(222, 209, 236);
+    height: 75px;
+}
+
+footer .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+footer .link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}

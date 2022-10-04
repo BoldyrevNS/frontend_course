@@ -1,0 +1,62 @@
+header {
+    background-color: rgb(143, 57, 235);
+}
+
+header .container {
+    height: 100%;
+    align-items: center;
+}
+
+header .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav .nav-link {
+    color: #fff;
+}
+
+main {
+    padding-top: 15px;
+}
+
+main .title{
+    text-align: center;
+}
+
+.login-form{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 1px solid rgb(222, 209, 236);
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: rgb(143, 57, 235);
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: auto;
+}
+
+.btn.btn-login:hover {
+    background-color: rgb(80, 23, 139);
+    color: rgb(255, 255, 255);
+}
+
+.login-form .errors {
+    color: red;
+}
+

@@ -1,0 +1,61 @@
+header {
+    background-color: rgb(143, 57, 235);
+}
+
+header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+
+nav .nav-link {
+    color: #fff;
+}
+
+
+main {
+    padding-top: 15px;
+}
+
+.products-list .product {
+    position: relative;
+    border: 1px solid rgb(222, 209, 236);
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.products-list .product img {
+    width: 100%;
+}
+
+
+.btn-try {
+    width: 100%;
+    background-color: rgb(143, 57, 235);
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: auto;
+}
+
+.btn.btn-try:hover {
+    background-color: rgb(80, 23, 139);
+    color: rgb(255, 255, 255);
+}

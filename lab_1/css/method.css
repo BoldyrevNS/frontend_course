@@ -1,0 +1,41 @@
+header {
+    background-color: rgb(143, 57, 235);
+}
+
+header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+
+nav .nav-link {
+    color: #fff;
+}
+
+
+main {
+    padding-top: 15px;
+}
+
+.file-form{
+    position: relative;
+    border: 1px solid rgb(222, 209, 236);
+    padding: 15px;
+    max-width: 400px;
+}

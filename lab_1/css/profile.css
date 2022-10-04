@@ -1,0 +1,43 @@
+header {
+    background-color: rgb(143, 57, 235);
+}
+
+header .container {
+    height: 100%;
+    align-items: center;
+}
+
+header .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav .nav-link {
+    color: #fff;
+}
+
+main {
+    padding-top: 15px;
+}
+
+main section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main .profile-title{
+    text-align: center;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: rgb(222, 209, 236);
+}
