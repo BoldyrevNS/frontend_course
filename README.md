@@ -1,3 +1,3 @@
 ## Тематика сайта: сервис для облачного машинного обучения.
 
-[Ссылка на сайт на GitHub pages][https://v31r.github.io/]
+[Ссылка на сайт на GitHub pages](https://v31r.github.io/)
