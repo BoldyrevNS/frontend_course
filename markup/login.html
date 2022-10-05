@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="img/mainPageLogo.ico" type="image/x-icon">
+
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+
+        <!-- Screen size -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">     
+        <link rel="stylesheet" href="css/main.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@800&display=swap" rel="stylesheet">
+
+        <title>Print4U</title> 
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>      
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <!-- Site logo (image and text) -->
+                    <a class="navbar-brand" href="index.html" >
+                        <img src="img/mainPageLogo.jpg" width="50" class="d-inline-block align-text-center" alt="">
+                        <div class="d-inline">Print4U</div> 
+                    </a>
+                    <!-- Site toggler -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-target="#collapse-target">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Site menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link" href="review.html">Отзывы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="login.html">Войти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <wrapper>
+            <!-- Content block -->
+            <content>
+                <div class="content-block border border-1 border-dark rounded-3">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label content-title">Адрес электронной почты</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label content-title">Пароль</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <div id="emailHelp" class="form-text">Ваш пароль должен состоять из 8-20 символов, содержать буквы и цифры и не должен содержать пробелов, специальных символов или эмодзи.</div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Проверить меня</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </content>
+            
+            <!-- Footer -->
+            <footer>
+                <!-- Текст внутри блока выровнен по правому краю. Цвет фона блока #2a2a2a, значения полей от блока до его содержимого равно 1em, цвет текста внутри блока белый (#fff) -->
+                <div style="text-align:right; background:#2a2a2a; padding:1em; color: #fff;">
+                    © Print4U <br>2022
+                </div>
+            </footer>
+        <wrapper>
+    </body>
+    <!-- Bootstrap JS components-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- FontAwesome JS components -->
+    <script src="https://kit.fontawesome.com/2b8bc78ec7.js" crossorigin="anonymous"></script>
+</html>
