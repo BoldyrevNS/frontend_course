@@ -1,0 +1,203 @@
+html, body {
+    font-family: sans-serif;
+    background-color: #111618;
+}
+.wrapper {
+    min-height: 100vh;
+}
+header {
+    background-color: #199C77;
+    color: #fff;
+}
+
+nav.navbar {
+    background-color: #199C77;
+    padding: 0;
+    height: 50px;
+}
+
+nav .nav-link {
+    color: #fff;
+}
+
+header .logo img{
+    width: 200px;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+main {
+  padding: 15px;
+}
+
+main .widget-container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: rgb(37, 47, 55);
+    border-radius: 2px;
+    border-top: 3px solid #199C77;
+    box-shadow: 0 5px 10px 2px rgba(29,41,44,.23);
+    font-size: 1rem;
+    height: 100%;
+    width: fit-content;
+}
+
+main .widget-header{
+    background-color: hsla(0,0%,100%,.075);
+    padding: 14px 16px;
+}
+
+main .widget-title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .025em;
+    line-height: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+main .runs-list{
+    color: #fff;
+    margin: auto;
+}
+
+main .runs-list .run{
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: max-content;
+    text-align: center;
+    width: auto;
+    padding-bottom: 10px;
+}
+
+.run .btn{
+    background-color: #199C77;
+}
+
+.run img{
+    width: 100%;
+}
+
+main .run .description{
+    text-align: center;
+    padding-top: 10px;
+}
+main .widget-body{
+    width: fit-content;
+    padding-top: 1rem;
+    color: #fff;
+}
+
+main .widget-body .container{
+    max-width: 800px;
+}
+
+main .game-link{
+    text-decoration: none;
+}
+
+main .poster{
+  width: 120px;
+}
+
+main .content{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer{
+    background-color: rgb(37, 47, 55);
+    border-top: 3px solid #199C77;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    top: auto;
+}
+
+footer .info{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+    color: #fff;
+}
+
+footer .copyright {
+    background-color: #212a31;
+    color: #fff;
+}
+
+main .form-label-simple {
+    font-size: 14px;
+    letter-spacing: .4px;
+    line-height: normal;
+}
+
+main .form-labeled-content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+main .form-labeled-input{
+  padding-bottom: 1em;
+}
+
+
+main .form-control {
+    background-color: #1e262c;
+    border-color: hsla(0,0%,100%,.13);
+    color: #fff;
+    width: 100%;
+    height: 30px;
+    border-radius: .25rem;
+}
+
+main .container-login{
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.container-login .justify-between {
+    justify-content: space-between;
+}
+
+.container-login .items-center {
+    align-items: center;
+}
+
+.container-login .flex-auto {
+    flex: 1 1 auto;
+}
+
+.container-login .flex {
+    display: flex;
+}
+
+
+
+.container-login .text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+.container-login .widget-container a {
+    text-decoration: none;
+    color: #199673;
+    margin: 0px 10px;
+}
+
+main .container-login .widget-body{
+    padding: 16px;
+}
