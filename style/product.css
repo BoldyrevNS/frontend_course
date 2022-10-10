@@ -1,0 +1,21 @@
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.products-list .product {
+    width: 24%;
+    margin-bottom: 45px;
+    margin-right: 1%;
+}
+
+.products-list .product img {
+    width: 200px;
+    height: 200px;
+}
+
+.search {
+    width: 150px;
+}
