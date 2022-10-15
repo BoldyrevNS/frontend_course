@@ -5,11 +5,11 @@
     <title>DND helper</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito: wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="E:\Institute\Web\MainProject\style/style.css">
-
-    
+    <link rel="stylesheet" href="E:\Institute\Front\frontend_course-1\style/style.css">
+    <link rel="stylesheet" href="E:\Institute\Front\frontend_course-1\style/authstyle.css">
+    <script src="./js/heroes.js"></script>
 
 </head>
 
@@ -29,14 +29,14 @@
         
             <form class="Category">
                 <div>
-                <ul>
-                    <lh>Категории</lh>
-                        <li class="heroes"><img class="icon" style="width: 40px;" src="img\icon\hero.png"><a href="DnDHeroes.html" style="font-size: 20px;"> Персонажи </a></li>
-                        <li class="monster"><img class="icon" src="img\icon\monster.png"><a href="Bestiary.html">Бестиарий</a></li>
-                        <li class="magic"><img class="icon" src="img\icon\magic.jpg"><a href="#">Заклинания</a></li>
-                        <li class="weapon"><img class="icon" src="img\icon\weapon.png"><a href="#">Предметы</a></li>
-                        <li class="races"><img class="icon" src="img\icon\races.jpg"><a href="#">Расы</a></li>
-                        <li class="classes"><img class="icon" src="img\icon\classes.jpg"><a href="#">Классы</a></li>     
+                    <ul>
+                        <lh>Категории</lh>
+                            <li class="heroes"><img class="icon" style="width: 40px;" src="img\icon\hero.png"><a href="DnDHeroes.html" style="font-size: 20px;"> Персонажи </a></li>
+                            <li class="monster"><img class="icon" src="img\icon\monster.png"><a href="Bestiary.html">Бестиарий</a></li>
+                            <li class="magic"><img class="icon" src="img\icon\magic.jpg"><a href="#">Заклинания</a></li>
+                            <li class="weapon"><img class="icon" src="img\icon\weapon.png"><a href="#">Предметы</a></li>
+                            <li class="races"><img class="icon" src="img\icon\races.jpg"><a href="#">Расы</a></li>
+                            <li class="classes"><img class="icon" src="img\icon\classes.jpg"><a href="#">Классы</a></li>     
                     </ul>
                 </div>
             </form>
@@ -68,14 +68,13 @@
                 <div class = "TopPage">
                     <div class = "Name">
                         <p style="font-size: 20px; margin: 0px;">Имя персонажа: </p>
-                        <div class = "NameField">
-                            <p>Доктор Ливси</p>
-                        </div>
+                        <input type ="text" class = "NameField" value="Доктор Ливси">
+  
                     </div>
                     <div class = "Race">
                         <p style="font-size: 20px; margin: 0px;">Раса: </p>
                         <div class = "NameField">
-                            <p>Человек</p>
+                            Человек
                         </div>
                     </div>
                     <div class="WorldView">
@@ -95,9 +94,7 @@
         
                     <div class = "Name">
                         <p style="font-size: 20px; margin: 0px;">Уровень персонажа: </p>
-                        <div class = "NameField">
-                            <p>5</p>
-                        </div>
+                        <input type ="text" class = "NameField" id ="level" value="5">
                     </div>
                 </div>
         
@@ -115,55 +112,49 @@
             
                         <div class="Parametrs">
             
-                            <div class = "Param">
-                                <p style="font-size:20px; margin: 0px;"><b>Сила</b></p>
-                                <br>
-                                <p style="font-size:35px; text-align: center; margin: 0px;"><b>16</b></p>
+                            <div class = "Param" id="strength">
+                                <p class ="Name" ><b>Сила</b></p>
+                                <textarea>16</textarea>
                                 <div class="Bonus">
                                     <p style="font-size:30px; text-align: center; margin: auto;">+3</p>
                                 </div>
                             </div>
             
-                            <div class = "Param">
-                                <p style="font-size:20px; margin: 0px;"><b>Ловкость</b></p>
-                                <br>
-                                <p style="font-size:35px; text-align: center; margin: 0px;"><b>12</b></p>
+                            <div class = "Param" id="dexterity">
+                                <p class ="Name" ><b>Ловкость</b></p>
+                                <textarea>12</textarea>
                                 <div class="Bonus">
                                     <p style="font-size:30px; text-align: center; margin: auto;">+1</p>
                                 </div>
                             </div>
             
-                            <div class = "Param">
-                                <p style="font-size:20px; margin: 0px; text-align: center;"><b>Телос<br>ложение</b></p>
-                                <br>
-                                <p style="font-size:35px; text-align: center; margin-top: -20px; margin-bottom: 0px;"><b>18</b></p>
-                                <div class="Bonus">
-                                    <p style="font-size:30px; text-align: center; margin: auto;">+4</p>
+                            <div class = "Param" id="physique">
+                                <p class ="Name" ><b>Телос<br>ложение</b></p>
+                                <textarea>18</textarea>
+                                <div class="Bonus" style="margin-top: -5px;">
+                                    <p style="font-size:30px; text-align: center; margin: auto; ">+4</p>
                                 </div>
                             </div>
             
-                            <div class = "Param">
-                                <p style="font-size:19px; margin: 0px;"><b>Интеллект</b></p>
-                                <br>
-                                <p style="font-size:35px; text-align: center; margin: 0px;"><b>14</b></p>
+                            <div class = "Param"  id="intelligence">
+                                <p class ="Name"><b>Интеллект</b></p>
+                                <textarea>14</textarea>
                                 <div class="Bonus">
-                                    <p style="font-size:30px; text-align: center; margin: auto;">+2</p>
+                                    <p style="font-size:30px; text-align: center; margin: auto; ">+2</p>
                                 </div>
                             </div>
             
-                            <div class = "Param">
-                                <p style="font-size:20px; margin: 0px;"><b>Мудрость</b></p>
-                                <br>
-                                <p style="font-size:35px; text-align: center; margin: 0px;"><b>10</b></p>
+                            <div class = "Param" id="wisdom">
+                                <p class ="Name" ><b>Мудрость</b></p>
+                                <textarea>10</textarea>
                                 <div class="Bonus">
                                     <p style="font-size:30px; text-align: center; margin: auto;">0</p>
                                 </div>
                             </div>
             
-                            <div class = "Param">
-                                <p style="font-size:20px; margin: 0px;"><b>Харизма</b></p>
-                                <br>
-                                <p style="font-size:35px; text-align: center; margin: 0px;"><b>20</b></p>
+                            <div class = "Param" id="charisma" style="margin-bottom: 0px;">
+                                <p class ="Name" ><b>Харизма</b></p>
+                                <textarea>20</textarea>
                                 <div class="Bonus">
                                     <p style="font-size:30px; text-align: center; margin: auto;">+5</p>
                                 </div>
@@ -174,8 +165,7 @@
                     <div class = "CenterLayout">
                         <p style="text-align:center; margin: 0;"><img src="https://regnum.ru/uploads/pictures/news/2015/09/01/1441099985_остров-сокровищ-rejpg_normal.jpg" ></p>
                         <div  style= "font-size: 16px;">
-                            Очень хороший и весёлый человек. Характер общительный. Не женат.
-        
+                            <textarea>Очень весёлый и интересный человек. Характер общительный. Гигачад</textarea>
                         </div>
                     </div>
         
@@ -184,18 +174,27 @@
                         <div class="List">
                             <p>Классы</p>
                             <div>
-                                a
+                                <textarea placeholder="Введите описание класса"></textarea>
                             </div>
                         </div>
         
                         <div class="List">
                             <p>Предметы</p>
-                            <div class = "Field"></div>
+                            <div class = "Field">
+                                <textarea placeholder="Введите описание предметов"></textarea>
+
+                            </div>
                         </div>
         
                         <div class="List">
                             <p>Заклинания</p>
-                            <div class = "Field"></div>
+                            <div class = "Field">
+                                <textarea placeholder="Введите описание заклинаний"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="m b-5">
+                            <button type="submit" class="btn btn-green" onclick="checkParams()">Изменить</button>
                         </div>
         
                     </div>
@@ -205,15 +204,14 @@
         </main>
         <div class="Menu">
             <div>
-                <p class="User">Хорошей игры <a href="DNDAuth.html"> Username</a>.</p>
+                <p class="User">Хорошей игры Username</a>.</p>
                 <img class="Usericon" src="https://w7.pngwing.com/pngs/944/770/png-transparent-computer-icons-login-google-account-internet-user.png">
-                <button class="Menubutton"><img class="Usericon" src="img\icon\vector.png"></button>
+                <button class="Menubutton"><img class="Usericon" src="img\icon\vector.png" onclick="window.location.href = 'DNDAuth.html';"></button>
             </div>
             <p>Помните вы сами решаете свою судьбу, но удача порой может...Впрочем на вас удача отдохнула</p>
     
         </div>
     
     </div>
-    
-    <script src ="lab.js"></script>
+
 </body>

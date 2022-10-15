@@ -5,10 +5,12 @@
     <title>DND helper</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito: wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/authstyle.css">
+    <script src="./js/func.js"></script>
 
 </head>
 
@@ -42,22 +44,25 @@
         
         </section>
 
-        <div class="login">
-            <p>
-              Логин:
-              <input type="text" name="login" id="login" value="chepuch@mail.ru">
-        
-            <p>
-              <label for="password">Пароль:</label>
-              <input type="password" name="password" id="password" value="8800553535">
-            </p>
-        
-            <p class="login-submit">
-              <button type="submit" class="login-button" onclick="">Войти</button>
-            </p>
-        
-            <p class="forgot-password"><a href="/developer/lesson75/demo/1/index.html">Забыл пароль?</a></p>
-        </form>
+        <div class="login-form">
+            <h1>Авторизация</h1>
+            <hr>
+            <form class="mt-4" method="post" onsubmit="login(); event.preventDefault()" >
+            <div class="mb-4">
+              <div><label>Email</label></div>
+              <div class = "input"><input type="email" class="w-100" name="email"></div> 
+              <div class="error"></div>
+            </div>
+            <div class="mb-4">
+              <div><label>Пароль</label></div>
+              <div class = "input"><input type="password" class="w-100" name="password" ></div>
+              <div class="error"></div>
+            </div>
+            <div class="mb-5">
+              <button type="submit" class="btn btn-yellow">Войти</button>
+            </div>
+          </form>
+        </div>
     </div>
     
 </body>

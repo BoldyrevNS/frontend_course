@@ -1,326 +1,365 @@
+body{
+    background-color: rgba(255,255,102);
+    padding: 0;
+    margin: 0;
+}
+
+.Body{
+    display: flex;
+    flex-direction: row;
+}
+
+.Sidebar {
+    top:0;
+    width: 250px; 
+
+    left: 0px;
+    position:fixed;
+    top:0;
+
+    overflow: auto;
 
     
-    body{
-        background-color: rgba(255,255,102);
-        padding: 0;
-        margin: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    background: rgba(162,95,42);
+
+/* Карточка */ 
+/*filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.25));*/
+
+}
+
+.Sidebar .logoContainer img {
+    max-width: 100%;
+}
+
+.logoText h2{
+    color:rgba(255, 255, 0);
+    text-align: center;
+}
+
+
+
+.Category {
+
+    display: flex;
+    flex-direction: column; align-items: flex-start; padding: 0px;
+    position: static; width: 100%; height: 100%; left: auto;
+    top: 0x;
+}
+
+.Category ul li {
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 30px 0px;
+
+    list-style-type: none; font-family: Nunito; font-style: normal; font-weight: normal; font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.025em;
+/* identical to box height */ 
+}
+
+.Category ul lh {
+    font-family: Nunito; font-style: normal; font-weight: 600; font-size: 24px; line-height: 33px;
+    letter-spacing: 0.03em;
+    color: rgba(255,186,0);
+}
+
+.Category ul li a { 
+    color: #F9F9F9;
+    text-decoration: none;
+}
+
+.Category li a:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    width: 20px;
+    padding-right: 10px;
+    position: relative;
+    top: 2px;
+    background-image: none;
+    line-height: 1;
+    margin-right: 10px;
+    padding: 0px;
+}
+
+
+.Main {
+    width: 1000px; 
+    height: 1200px; 
+    margin-left: 300px;
+    top: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.MainInfo {
+    padding: 20px;
+    width: 1000px; 
+    max-height: 45%;
+    background: rgba(255,186,0);
+}
+
+.Main h2 {
+    color:rgba(255, 255, 0);
+    flex: none; 
+    order: 0;
+    align-self: stretch; flex-grow: 0; margin: 0px 10px;
+
+/* Акцент */
+/* Inside Auto Layout */
+
+}
+
+
+.MainList {
+    top: 20px;
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255,186,0);
+    width: 100%; 
     }
 
-    .Body{
-        display: flex;
-        flex-direction: row;
-    }
+.TopPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.TopPage div{
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.TopPage.Name{
+     height: 60px;
+     width: 20%;
+     margin: 0px;   
+}
+
+.NameField{
+    height: 30px;
+    width: 95%; 
+    background-color: white;
+    align-items: flex-end;
+    border: 3px black solid;
+    font-size: 25px;
+    text-align:center;
+    margin: 0px;
+    line-height: 1;
+}
+
+#selectvalue{
+    font-size: 25px;
+    border: 3px black solid;
+}
+
+.RightLayout textarea{
+    height: 100%;
+    width: 100%;
+    resize: none;
+}
+
+.CenterLayout textarea{
+    height: 100%;
+    width: 100%;
+    resize: none;
+}
+
+
+.MainTable{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    height: 900px;
+}
+
+
+.ParametrTable{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background: rgba(64,58,58);
+
+}
+
+.Bonus{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+}
+
+
+.Bonus .Count{
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    border: 4px black solid;
+    font-size: 40px;
+    text-align: center;
+    line-height: 1;
     
-    .Sidebar {
-        top:0;
-        width: 250px; 
+}
 
-        left: 0px;
-        position:fixed;
-        top:0;
+.Bonus .Name{
+    margin-top: 2px;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    border: 1px black solid;
+    text-align: justify;
+    font-size: 24px;
+    line-height: 1;
+}
 
-        overflow: auto;
 
-        
-        display: flex;
-        flex-direction: column; 
-        align-items: flex-start;
-        background: rgba(162,95,42);
+
+.Parametrs{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.Parametrs .Param{
+    height: 100px;
+    width: 100%;
+
+    background: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Parametrs .Param .Name{
+    font-size:19px;
+    margin: 0px;
+    padding:0px;
+    line-height: 1;
+}
+
+.Parametrs .Param textarea{
+    width: 100%;
+    height: 50%;
+    resize: none;
+    font-size:35px;
+    padding: 0px;
+    text-align: center;
+    line-height: 1;
+}
+
+.Parametrs .Bonus {
+    /*background-color: black;*/
+    margin-top:0px ;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 200px;
+    background: white;
+    text-align: center;
+}
+
+
+.CenterLayout{
+    margin-left: 3px;
+    width: 50%;
+}
+
+.CenterLayout img{
+    max-width: 100%;
+    max-height: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid black;
+}
+
+.CenterLayout div{
+    height: 540px;
+    background: white;
+    border: 2px solid black;
+    margin: 0;
+
+}
+
+.RightLayout{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    height: 100%;
+    width: 25%;
+
+}
+
+.RightLayout .List p{
+    margin: 0px;
+    font-size: 25px;
+}
+
+.RightLayout .List div{
     
-    /* Карточка */ 
-    /*filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.25));*/
+    overflow: auto;
+    width: 100%;
+    height: 250px;
+    background: white;
+    border: 2px solid black;
+
+}
+
+.Menu{
+    position: absolute; 
+    display: flex;
+    flex-direction: column ; 
+    align-items: flex-end;
+    width: 300px;
+    left: 1400px;
+}
+
+.Menu div{
+    display: flex;
+    flex-direction: row ; 
+    align-items: center;
+}
+
+.Usericon{
+    width: 42px;
+    height: 42px;
+    top: 0px;
+    border-radius: 50%; 
+}
+
+.Menubutton {
+    position: relative;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    /* Smooth shadow */
+     
     
     }
 
-    .Sidebar .logoContainer img {
-        max-width: 100%;
-    }
+.Menubutton img{
+    max-width: 100%;
+    max-width: 100%;
+} 
 
-    .logoText h2{
-        color:rgba(255, 255, 0);
-        text-align: center;
-    }
-
-
-    
-    .Category {
-
-        display: flex;
-        flex-direction: column; align-items: flex-start; padding: 0px;
-        position: static; width: 100%; height: 100%; left: auto;
-        top: 0x;
-    }
-
-    .Category ul li {
-    
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-        margin: 30px 0px;
-    
-        list-style-type: none; font-family: Nunito; font-style: normal; font-weight: normal; font-size: 16px;
-        line-height: 22px;
-        letter-spacing: 0.025em;
-    /* identical to box height */ 
-    }
-    
-    .Category ul lh {
-        font-family: Nunito; font-style: normal; font-weight: 600; font-size: 24px; line-height: 33px;
-        letter-spacing: 0.03em;
-        color: rgba(255,186,0);
-    }
-    
-    .Category ul li a { 
-        color: #F9F9F9;
-        text-decoration: none;
-    }
-
-    .Category li a:hover {
-        text-decoration: underline;
-    }
-    
-    .icon {
-        width: 20px;
-        padding-right: 10px;
-        position: relative;
-        top: 2px;
-        background-image: none;
-    }
-
-    
-    .Main {
-        width: 1000px; 
-        height: 1000px; 
-        margin-left: 300px;
-        top: 10px;
-        display: flex;
-        flex-direction: column; 
-        align-items: flex-start;
-    }
-    
-    .MainInfo {
-        padding: 20px;
-        width: 1000px; 
-        max-height: 50%;
-        background: rgba(255,186,0);
-    }
-    
-    .Main h2 {
-        color:rgba(255, 255, 0);
-        flex: none; 
-        order: 0;
-        align-self: stretch; flex-grow: 0; margin: 0px 10px;
-
-    /* Акцент */
-    /* Inside Auto Layout */
-    
-    }
-
-
-    .MainList {
-        top: 20px;
-        margin-top: 25px;
-        padding: 20px;
-        background: rgba(255,186,0);
-        width: 100%; 
-        }
-    
-    .TopPage {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .TopPage div{
-        margin-right: 10px;
-        margin-left: 0px;
-    }
-
-    .Name{
-         height: 60px;
-         width: 20%;
-         margin: 0px;   
-    }
-
-    .NameField{
-        height: 30px;
-        width: 95%; 
-        background-color: white;
-        align-items: flex-end;
-        border: 3px black solid;
-   }
-
-   .NameField p{
-        font-size: 25px;
-        text-align:center;
-        margin: 0px;
-   }
-
-   #selectvalue{
-        font-size: 25px;
-        border: 3px black solid;
-   }
-
-
-   .MainTable{
-        display: flex;
-        flex-direction: row;
-        margin-top: 10px;
-   }
-
-
-   .ParametrTable{
-        display: flex;
-        flex-direction: column;
-        width: 20%;
-        background: rgba(64,58,58);
-
-   }
-   
-   .Bonus{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 50px;
-   }
-
-
-   .Bonus .Count{
-        width: 20%;
-        height: 100%;
-        background-color: white;
-        border: 4px black solid;
-        font-size: 40px;
-        text-align: center;
-        
-   }
-
-   .Bonus .Name{
-        margin-top: 2px;
-        width: 80%;
-        height: 100%;
-        background-color: white;
-        border: 1px black solid;
-        text-align: justify;
-        font-size: 24px;
-    }
-
-    .Parametrs{
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-
-    .Parametrs .Param{
-        height: 100px;
-        width: 100%;
-
-        background: white;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .Parametrs .Bonus {
-        /*background-color: black;*/
-        margin-top:0px ;
-        height: 50%;
-        width: 50%;
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        border: 5px solid black;
-        box-sizing: border-box;
-        border-radius: 200px;
-        background: white;
-        text-align: center;
-    }
-
-
-    .CenterLayout{
-        margin-left: 3px;
-        width: 50%;
-    }
-
-    .CenterLayout img{
-        max-width: 100%;
-        max-height: 50%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        object-position: center;
-        border: 2px solid black;
-    }
-
-    .CenterLayout div{
-        height: 50%;
-        background: white;
-        border: 2px solid black;
-        margin: 0;
-
-    }
-
-    .RightLayout{
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-        height: 100%;
-        width: 25%;
-
-    }
-
-    .RightLayout .List p{
-        margin: 0px;
-        font-size: 25px;
-    }
-
-    .RightLayout .List div{
-        
-        overflow: auto;
-        width: 100%;
-        height: 250px;
-        background: white;
-        border: 2px solid black;
-
-    }
-    
-    .Menu{
-        position: absolute; 
-        display: flex;
-        flex-direction: column ; 
-        align-items: flex-end;
-        width: 300px;
-        left: 1400px;
-    }
-
-    .Menu div{
-        display: flex;
-        flex-direction: row ; 
-        align-items: center;
-    }
-    
-    .Usericon{
-        width: 42px;
-        height: 42px;
-        top: 0px;
-        border-radius: 50%; 
-    }
-
-    .Menubutton {
-        position: relative;
-        padding: 0px;
-        width: 40px;
-        height: 40px;
-        /* Smooth shadow */
-         
-        
-        }
-
-    .Menubutton img{
-        max-width: 100%;
-        max-width: 100%;
-    }
-        
+.btn-green {
+    width: 100%;
+    background-color: #7cfc00;
+    color: #333;
+    transition: 2s;
+  }
