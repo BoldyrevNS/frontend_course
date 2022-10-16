@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    background-image: url("../content/auth/backlogin.svg");
+    background-size: cover;
+    font-family:"Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-block{
+    background-color: #36393f;
+    padding: 32px;
+    transform: translateY(15vh);
+    border-radius: 5px;
+    width: 25rem;
+}
+
+.hello-text{
+    font-weight: 600;
+    color: white;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.glad-to-see-text{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #a7a9ad;
+    text-align: center;
+}
+
+label{
+    color: #a7a9ad;
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+span{
+    color: #cf4144;
+}
+
+input{
+    background-color: #202225;
+    color: #a7a9ad;
+    padding: 10px;
+    height: 18px;
+    border-radius: 3px;
+    border: solid 0;
+    font-size: 14px;
+    font-weight: 500;
+    width: 96%;
+}
+
+input:invalid{
+
+    border: 1px solid #e5396a;
+}
+
+.inks{
+    color: #06a3e1;
+    font-size: 13px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+.inks:hover{
+    text-decoration: underline;
+}
+
+.button{
+    color: white;
+    background-color: #5865f2;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 8px;
+    height: 44px;
+    border-radius: 3px;
+    border: solid 0;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.button:hover{
+    background-color: #4752c4;
+}
+
+.need-registration{
+    color: #a7a9ad;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+select{
+    background-color: #202225;
+    color: #a7a9ad;
+    border-radius: 3px;
+    border: solid 0;
+    font-size: 14px;
+    font-weight: 500;
+    height: 38px;
+    width: 30%;
+    padding: 10px;
+}
+
+.birth-day{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.agreement{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+
