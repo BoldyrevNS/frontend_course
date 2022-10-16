@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../styles/login.css">
+    <script type="text/javascript" src="../../scripts/login.js"></script>
+
+</head>
+<body>
+
+
+
+<div class="login-block">
+    <div>
+        <h1 class="hello-text">С возвращением!</h1>
+        <div class="glad-to-see-text" >
+            Мы так рады видеть вас снова!
+        </div>
+    </div>
+
+    <form name="login" action="login.html" >
+
+
+        <div>
+            <div>
+                <label for="email">
+                    АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ ИЛИ НОМЕР ТЕЛЕФОНА
+                    <span>*</span>
+                </label>
+                <input type="email" name="email" id="email" >
+            </div>
+
+            <div>
+                <label for="password">
+                    ПАРОЛЬ
+                    <span>*</span>
+                </label>
+                <input type="password" name="password" id="password" >
+                <a href="#" class="inks"> Забыли пароль? </a>
+            </div>
+        </div>
+
+        <div>
+            <button onclick="validateForm()" type="button" class="button" >Вход</button>
+            <div>
+                <div class="need-registration"> Нужна учетная запись?
+                    <a href="registration.html" class="inks"> Зарегистрироваться </a>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
