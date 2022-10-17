@@ -1,3 +1,2 @@
-# Ваш readme
-
-Укажите тематику
+# Сайт типа imageboard
+Пример : deviantart.com
