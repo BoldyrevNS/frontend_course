@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <div class="logo">
-          <a href="#">
+          <a href="/">
             <img src="../../img/logo.png">
           </a>
         </div>
@@ -13,10 +13,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <router-link class="nav-link" :to="{name: 'search'}">
                 <img src="../../img/search_icon.png">
                 Поиск
-              </a>
+              </router-link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
@@ -74,10 +74,10 @@ header .logo img {
   width: 150px;
   margin-right: 10px;
 }
-a.nav-link:link{
+a.nav-link{
   color: white;
 }
-a.nav-link:link:hover{
+a.nav-link:hover{
   color: cyan;
 }
 div.container-fluid{

@@ -1,9 +1,21 @@
 <template>
   <main class="main-content">
+    <form class="search-field">
+      <div class="row mx-auto search-bar-line">
+        <input type="search" class="search-bar" name="q">
+        <button class="search-bar-button"><b>Поиск</b></button>
+      </div>
+      <div>
+        <label class="search-bar-label"><b>Искать рисунки, загруженные с </b></label>
+        <input type="date" class="pick-date" name="date-from">
+        <label class="search-bar-label"><b> по </b></label>
+        <input type="date" class="pick-date" name="date-to">
+      </div>
+    </form>
     <section class="row mx-auto">
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
+          <a href="#">
             <img class="gallery-illust-img" src="../img/2.png">
             <figcaption>
               Название рисунка
@@ -14,7 +26,7 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
+          <a href="#">
             <img class="gallery-illust-img" src="../img/1.png">
             <figcaption>
               Название рисунка
@@ -25,7 +37,7 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
+          <a href="#">
             <img class="gallery-illust-img" src="../img/0.png">
             <figcaption>
               Название рисунка
@@ -36,18 +48,7 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
-            <img class="gallery-illust-img" src="../img/3.jpg">
-            <figcaption>
-              Название рисунка
-              <p>Автор</p>
-            </figcaption>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
+          <a href="#">
             <img class="gallery-illust-img" src="../img/4.png">
             <figcaption>
               Название рисунка
@@ -58,7 +59,18 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
+          <a href="#">
+            <img class="gallery-illust-img" src="../img/3.jpg">
+            <figcaption>
+              Название рисунка
+              <p>Автор</p>
+            </figcaption>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="gallery-illust-container">
+          <a href="#">
             <img class="gallery-illust-img" src="../img/2.png">
             <figcaption>
               Название рисунка
@@ -69,7 +81,7 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
+          <a href="#">
             <img class="gallery-illust-img" src="../img/1.png">
             <figcaption>
               Название рисунка
@@ -80,7 +92,7 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
+          <a href="#">
             <img class="gallery-illust-img" src="../img/0.png">
             <figcaption>
               Название рисунка
@@ -91,18 +103,7 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
-            <img class="gallery-illust-img" src="../img/3.jpg">
-            <figcaption>
-              Название рисунка
-              <p>Автор</p>
-            </figcaption>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
+          <a href="#">
             <img class="gallery-illust-img" src="../img/4.png">
             <figcaption>
               Название рисунка
@@ -113,7 +114,18 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
+          <a href="#">
+            <img class="gallery-illust-img" src="../img/3.jpg">
+            <figcaption>
+              Название рисунка
+              <p>Автор</p>
+            </figcaption>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="gallery-illust-container">
+          <a href="#">
             <img class="gallery-illust-img" src="../img/2.png">
             <figcaption>
               Название рисунка
@@ -124,41 +136,8 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
+          <a href="#">
             <img class="gallery-illust-img" src="../img/1.png">
-            <figcaption>
-              Название рисунка
-              <p>Автор</p>
-            </figcaption>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
-            <img class="gallery-illust-img" src="../img/0.png">
-            <figcaption>
-              Название рисунка
-              <p>Автор</p>
-            </figcaption>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
-            <img class="gallery-illust-img" src="../img/3.jpg">
-            <figcaption>
-              Название рисунка
-              <p>Автор</p>
-            </figcaption>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="gallery-illust-container">
-          <a href="#" class="in-text-link">
-            <img class="gallery-illust-img" src="../img/4.png">
             <figcaption>
               Название рисунка
               <p>Автор</p>
@@ -172,11 +151,18 @@
 
 <script>
 export default {
-  name: "HomeView"
+  name: "SearchView"
 }
 </script>
 
 <style scoped>
+div .row{
+  margin-left: 0;
+  margin-right: 0;
+}
+main.main-content{
+  background-color: #00174a;
+}
 figcaption{
   color: white;
 }
@@ -203,6 +189,28 @@ figure.gallery-illust{
 img.gallery-illust-img{
   max-width: 100%;
   height: 200px;
+}
+form.search-field{
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+}
+div.search-bar-line{
+  margin-bottom: 15px;
+}
+input.search-bar{
+  width: 90%;
+  background-color: #06357a;
+  border-color: royalblue;
+  color: white;
+}
+button.search-bar-button{
+  width: 10%;
+  background-color: cyan;
+  border-color: royalblue;
+}
+label.search-bar-label{
+  color: white;
 }
 a:link{
   text-decoration: none;
