@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap");
+.card {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Mulish", sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    height: 30vw;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1000px) {
+  .card {
+    height: 45vw;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .card {
+    height: 65vw;
+  }
+}
+
+.card__front {
+  background-color: #d1bde0;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin: 5vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 8vw;
+  border: 3px solid #9373ac;
+  border-radius: 10px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .card__front {
+    width: 40vw;
+    height: 20vw;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1000px) {
+  .card__front {
+    width: 50vw;
+    height: 30vw;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .card__front {
+    width: 60vw;
+    height: 40vw;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .card__front {
+    -ms-grid-rows: 60px 40px;
+        grid-template-rows: 60px 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card__front {
+    -ms-grid-rows: 40px 20px;
+        grid-template-rows: 40px 20px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .card__front__word {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 501px) {
+  .card__front__word {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card__front__word {
+    font-size: 20px;
+  }
+}
+
+.card__front__transcription {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.card__front__button {
+  border: 2px solid #9373ac;
+  color: #9373ac;
+  font-weight: bold;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 10%;
+  width: 50%;
+  height: 55%;
+  font-family: "Mulish", sans-serif;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 801px) {
+  .card__front__button {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card__front__button {
+    font-size: 15px;
+  }
+}
+
+.card__front__numbers {
+  font-family: "Mulish", sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  .card__front__numbers {
+    margin-top: 7vh;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1000px) {
+  .card__front__numbers {
+    margin-top: 7vh;
+  }
+}
+
+@media screen and (max-width: 999px) and (min-width: 601px) {
+  .card__front__numbers {
+    margin-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card__front__numbers {
+    margin-top: 1vh;
+  }
+}
+
+.card__front__button:focus {
+  border: 2px solid black !important;
+}
+
+.card__front__button:hover {
+  background-color: #9373ac;
+  color: white;
+  font-weight: normal;
+}
+
+.card__front__translate {
+  width: 38%;
+  height: 55%;
+  margin-top: 10%;
+  border: none;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: "Mulish", sans-serif;
+  background-color: #d1bde0;
+}
+
+@media screen and (min-width: 801px) {
+  .card__front__translate {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card__front__translate {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=card.css.map */

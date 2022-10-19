@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap");
+
+.card {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @media screen and (min-width: 1200px) {
+        height: 30vw;
+    }
+
+    @media screen and (max-width: 1199px) and (min-width: 1000px) {
+        height: 45vw;
+    }
+
+    @media screen and (max-width: 999px) {
+        height: 65vw;
+    }
+
+    font-family: "Mulish", sans-serif;
+
+    &__front {
+        background-color: rgb(209, 189, 224);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+
+        @media screen and (min-width: 1200px) {
+            width: 40vw;
+            height: 20vw;
+        }
+
+        @media screen and (max-width: 1199px) and (min-width: 1000px) {
+            width: 50vw;
+            height: 30vw;
+        }
+
+        @media screen and (max-width: 999px) {
+            width: 60vw;
+            height: 40vw;
+        }
+
+        margin: 5vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 8vw;
+        border: 3px solid rgb(147, 115, 172);
+        border-radius: 10px;
+        transition: 1s;
+        display: grid;
+        align-items: center;
+
+        @media screen and (min-width: 801px) {
+            grid-template-rows: 60px 40px;
+        }
+
+        @media screen and (max-width: 800px) {
+            grid-template-rows: 40px 20px;
+        }
+
+        align-content: center;
+
+        &__word {
+            @media screen and (min-width: 801px) {
+                font-size: 40px;
+            }
+
+            @media screen and (max-width: 800px) and (min-width: 501px) {
+                font-size: 25px;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 20px;
+            }
+        }
+
+        &__transcription {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        &__button {
+            border: 2px solid rgb(147, 115, 172);
+            color: rgb(147, 115, 172);
+            font-weight: bold;
+            justify-self: center;
+            margin-top: 10%;
+            width: 50%;
+            height: 55%;
+            font-family: "Mulish", sans-serif;
+            @media screen and (min-width: 801px) {
+                font-size: 18px;
+            }
+
+            @media screen and (max-width: 800px) {
+                font-size: 15px;
+            }
+
+            border-radius: 10px;
+        }
+
+        &__numbers {
+            font-family: "Mulish", sans-serif;
+            @media screen and (min-width: 1200px) {
+                margin-top: 7vh;
+            }
+
+            @media screen and (max-width: 1199px) and (min-width: 1000px) {
+                margin-top: 7vh;
+            }
+
+            @media screen and (max-width: 999px) and (min-width: 601px){
+                margin-top: 5vh;
+            }
+
+            @media screen and (max-width: 600px) {
+                margin-top: 1vh;
+            }
+        }
+
+        &__button:focus {
+           border: 2px solid black !important;
+        }
+
+        &__button:hover {
+            background-color: rgb(147, 115, 172);
+            color: rgb(255, 255, 255);
+            font-weight: normal;
+        }
+
+        &__translate {
+            width: 38%;
+            height: 55%;
+            margin-top: 10%;
+            border: none;
+            justify-self: center;
+            font-family: "Mulish", sans-serif;
+            background-color: rgb(209, 189, 224);
+            @media screen and (min-width: 801px) {
+                font-size: 22px;
+            }
+
+            @media screen and (max-width: 800px) {
+                font-size: 18px;
+            }
+        }
+    }
+}

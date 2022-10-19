@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap");
+.hide-form {
+  display: none;
+}
+
+.form {
+  margin-top: 1vw;
+}
+
+.form input {
+  font-family: "Karla", sans-serif;
+  font-size: large;
+}
+
+.form button {
+  margin-left: 1vw;
+  font-family: "Karla", sans-serif;
+  font-size: large;
+}
+
+.form .input-block {
+  background-color: #f1c5c5;
+}
+/*# sourceMappingURL=form.css.map */

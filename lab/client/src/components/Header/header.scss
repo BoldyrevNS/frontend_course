@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+
+.header {
+    a {
+        text-decoration: none !important;
+        color: rgb(255, 255, 255)!important;
+    }
+    @media screen and (min-width: 600px) {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 0.5fr 0.25fr 0.25fr;
+        background-color: rgb(174, 136, 203);
+        color: rgb(255, 255, 255);
+        font-family: "Comfortaa", cursive;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 599px) {
+        display: grid;
+        grid-template-rows: 50px 100px 100px;
+        grid-template-columns: 1fr;
+        background-color: rgb(174, 136, 203);
+        color: rgb(255, 255, 255);
+        font-family: "Comfortaa", cursive;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 600px) {
+        height: 130px;
+    }
+
+    @media screen and (max-width: 599px) {
+        height: 250px;
+    }
+
+    align-items: center;
+    justify-items: center;
+
+    &__text {
+        @media screen and (min-width: 600px) {
+            font-size: 25px;
+        }
+
+        @media screen and (max-width: 599px) {
+            font-size: 20px;
+        }
+    }
+
+    &__exit {
+        position: absolute;
+        margin-right: 90%;
+        font-family: "Comfortaa", cursive;
+        font-size: larger;
+    }
+
+    &__buttons {
+        display: flex;
+        grid-template-rows: 1fr 1fr;
+        justify-self: center;
+        background-color: rgb(174, 136, 203);
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        &__text {
+            color: rgb(255, 255, 255) !important;
+            font-family: "Comfortaa", cursive;
+
+            @media screen and (min-width: 600px) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: 599px) {
+                font-size: 17px;
+            }
+        }
+    }
+
+    &__buttons:hover {
+        border: 2px dashed rgb(255, 255, 255);
+        border-radius: 20px;
+    }
+}

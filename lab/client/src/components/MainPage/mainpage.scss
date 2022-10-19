@@ -1,0 +1,41 @@
+@import "../Header/header.css";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+
+.main-container {
+    display: grid;
+    align-items: center;
+    font-family: "Comfortaa", cursive;
+    justify-content: center;
+    justify-items: center;
+    height: 68vh;
+
+    button {
+        font-family: "Comfortaa", cursive;
+        font-size: large;
+        width: 250px;
+    }
+
+    h1 {
+        font-size: 50px;
+        background: linear-gradient(rgb(15, 140, 168), rgb(246, 144, 56)
+        ); /* подробнее про градиенты */
+        -webkit-background-clip: text; /* подробнее про background-clip */
+        color: transparent;
+    }
+
+    p {
+        font-size: large;
+    }
+
+    img {
+        margin-bottom: 8%;
+        justify-self: center;
+    }
+
+    &__rating {
+        border: 2px dashed rgb(15, 140, 168);;
+        padding: 50px;
+        background-color: rgb(144, 227, 245);
+        color: rgb(59, 59, 59);
+    }
+}

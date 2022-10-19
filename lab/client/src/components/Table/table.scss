@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap");
+
+.add-btn{
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.2s linear;
+    border: none;
+    padding: 10px 10px;
+    width: 100px;
+    margin-top: 1vw;
+    background: rgb(15, 140, 168);
+    font-family: "Karla", sans-serif;
+    color: white;
+    font-size: 15px;
+}
+
+.add-btn:hover {
+    box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px rgb(15, 140, 168);
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+    padding: 20px;
+
+    @media screen and (min-width: 800px) {
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 799px) and (min-width: 500px) {
+        font-size: 15px;
+    }
+
+    @media screen and (max-width: 499px) {
+        font-size: 13px;
+    }
+
+    font-family: "Karla", sans-serif;
+
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+
+        input {
+            text-align: center;
+
+            @media screen and (min-width: 800px) {
+                font-size: 20px;
+                width: 50%;
+            }
+
+            @media screen and (max-width: 799px) and (min-width: 500px) {
+                font-size: 15px;
+                width: 70%;
+            }
+
+            @media screen and (max-width: 499px) {
+                font-size: 13px;
+                width: 70%;
+            }
+
+            color: rgb(59, 59, 59);
+            font-family: "Karla", sans-serif;
+        }
+
+        .input {
+            border: none;
+            outline: none;
+        }
+
+        .input-block{
+            background-color: rgb(241, 197, 197);
+        }
+
+
+        ::placeholder {
+            color: rgb(59, 59, 59);
+        }
+
+        th {
+            border-bottom: 1px solid rgb(246, 144, 56);
+
+            @media screen and (min-width: 600px) {
+                width: 200px;
+            }
+
+            @media screen and (max-width: 599px) {
+                width: 50px;
+            }
+
+            text-align: center;
+            color: rgb(15, 140, 168);
+        }
+
+        .buttons-col {
+            width: 100px !important;
+        }
+
+        td {
+            @media screen and (min-width: 600px) {
+                width: 200px;
+            }
+
+            @media screen and (max-width: 599px) {
+                width: 50px;
+            }
+
+            border: 1px solid rgb(246, 144, 56);
+            height: 50px;
+        }
+
+        .buttons {
+            width: 100px !important;
+
+            button {
+                display: inline-block;
+                margin: 5px;
+
+                @media screen and (min-width: 800px) {
+                    padding: 10px 20px;
+                }
+
+                @media screen and (max-width: 799px) and (min-width: 500px) {
+                    padding: 5px 10px;
+                }
+
+                @media screen and (max-width: 499px) {
+                    padding: 5px 5px;
+                }
+
+                cursor: pointer;
+                border-radius: 20px;
+                transition: 0.2s linear;
+                border: none;
+            }
+
+            .edit {
+                background: rgb(144, 227, 245);
+            }
+
+            .save {
+                background: rgb(15, 140, 168);
+                font-family: "Karla", sans-serif;
+                color: white;
+            }
+
+            .save-hide {
+                display: none;
+            }
+
+            .save-block{
+                background: rgb(203, 229, 235);
+                pointer-events: none;
+            }
+
+            
+
+            .del {
+                background: rgb(246, 144, 56);
+            }
+
+            .edit:hover {
+                box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px rgb(144, 227, 245);
+            }
+
+            .del:hover {
+                box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px rgb(246, 144, 56);
+            }
+
+            .save:hover {
+                box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px rgb(15, 140, 168);
+            }
+        }
+    }
+}

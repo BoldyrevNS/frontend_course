@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap");
+.card-container {
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .card-container {
+    height: 35vw;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1000px) {
+  .card-container {
+    height: 50vw;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .card-container {
+    height: 100vw;
+  }
+}
+
+.card-container .leftBtn,
+.card-container .rightBtn {
+  margin-top: 2vh;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card-container .leftBtn:hover {
+  border: 2px solid #9373ac;
+}
+
+.card-container .rightBtn:hover {
+  border: 2px solid #9373ac;
+}
+
+.card-container__buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: -3vw;
+}
+
+.card-container__buttons-container__buttons {
+  font-family: "Mulish", sans-serif;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .card-container__buttons-container__buttons {
+    width: 10vw;
+    height: 5vw;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 801px) {
+  .card-container__buttons-container__buttons {
+    width: 15vw;
+    height: 10vw;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 501px) {
+  .card-container__buttons-container__buttons {
+    width: 17vw;
+    height: 12vw;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card-container__buttons-container__buttons {
+    width: 21vw;
+    height: 15vw;
+    font-size: 14px;
+  }
+}
+
+.card-container__buttons-container__btn1 {
+  background-color: #f69038;
+  margin-right: 5vw;
+}
+
+.card-container__buttons-container__btn2 {
+  background-color: #0f8ca8;
+  margin-left: 5vw;
+}
+
+.alert-enter {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 600ms, -webkit-transform 600ms;
+  transition: opacity 600ms, -webkit-transform 600ms;
+  transition: opacity 600ms, transform 600ms;
+  transition: opacity 600ms, transform 600ms, -webkit-transform 600ms;
+}
+
+.alert-enter-active {
+  opacity: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: opacity 600ms, -webkit-transform 600ms;
+  transition: opacity 600ms, -webkit-transform 600ms;
+  transition: opacity 600ms, transform 600ms;
+  transition: opacity 600ms, transform 600ms, -webkit-transform 600ms;
+}
+
+.alert-exit {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: opacity 600ms, -webkit-transform 600ms;
+  transition: opacity 600ms, -webkit-transform 600ms;
+  transition: opacity 600ms, transform 600ms;
+  transition: opacity 600ms, transform 600ms, -webkit-transform 600ms;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 600ms, -webkit-transform 600ms;
+  transition: opacity 600ms, -webkit-transform 600ms;
+  transition: opacity 600ms, transform 600ms;
+  transition: opacity 600ms, transform 600ms, -webkit-transform 600ms;
+}
+/*# sourceMappingURL=cards.css.map */

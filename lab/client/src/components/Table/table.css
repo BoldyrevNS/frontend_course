@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap");
+.add-btn {
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  border: none;
+  padding: 10px 10px;
+  width: 100px;
+  margin-top: 1vw;
+  background: #0f8ca8;
+  font-family: "Karla", sans-serif;
+  color: white;
+  font-size: 15px;
+}
+
+.add-btn:hover {
+  -webkit-box-shadow: 0 0 0 2px white, 0 0 0 4px #0f8ca8;
+          box-shadow: 0 0 0 2px white, 0 0 0 4px #0f8ca8;
+}
+
+.table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 20px;
+  font-family: "Karla", sans-serif;
+}
+
+@media screen and (min-width: 800px) {
+  .table {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 799px) and (min-width: 500px) {
+  .table {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .table {
+    font-size: 13px;
+  }
+}
+
+.table table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table table input {
+  text-align: center;
+  color: #3b3b3b;
+  font-family: "Karla", sans-serif;
+}
+
+@media screen and (min-width: 800px) {
+  .table table input {
+    font-size: 20px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 799px) and (min-width: 500px) {
+  .table table input {
+    font-size: 15px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .table table input {
+    font-size: 13px;
+    width: 70%;
+  }
+}
+
+.table table .input {
+  border: none;
+  outline: none;
+}
+
+.table table .input-block {
+  background-color: #f1c5c5;
+}
+
+.table table ::-webkit-input-placeholder {
+  color: #3b3b3b;
+}
+
+.table table :-ms-input-placeholder {
+  color: #3b3b3b;
+}
+
+.table table ::-ms-input-placeholder {
+  color: #3b3b3b;
+}
+
+.table table ::placeholder {
+  color: #3b3b3b;
+}
+
+.table table th {
+  border-bottom: 1px solid #f69038;
+  text-align: center;
+  color: #0f8ca8;
+}
+
+@media screen and (min-width: 600px) {
+  .table table th {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .table table th {
+    width: 50px;
+  }
+}
+
+.table table .buttons-col {
+  width: 100px !important;
+}
+
+.table table td {
+  border: 1px solid #f69038;
+  height: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .table table td {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .table table td {
+    width: 50px;
+  }
+}
+
+.table table .buttons {
+  width: 100px !important;
+}
+
+.table table .buttons button {
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  border: none;
+}
+
+@media screen and (min-width: 800px) {
+  .table table .buttons button {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 799px) and (min-width: 500px) {
+  .table table .buttons button {
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .table table .buttons button {
+    padding: 5px 5px;
+  }
+}
+
+.table table .buttons .edit {
+  background: #90e3f5;
+}
+
+.table table .buttons .save {
+  background: #0f8ca8;
+  font-family: "Karla", sans-serif;
+  color: white;
+}
+
+.table table .buttons .save-hide {
+  display: none;
+}
+
+.table table .buttons .save-block {
+  background: #cbe5eb;
+  pointer-events: none;
+}
+
+.table table .buttons .del {
+  background: #f69038;
+}
+
+.table table .buttons .edit:hover {
+  -webkit-box-shadow: 0 0 0 2px white, 0 0 0 4px #90e3f5;
+          box-shadow: 0 0 0 2px white, 0 0 0 4px #90e3f5;
+}
+
+.table table .buttons .del:hover {
+  -webkit-box-shadow: 0 0 0 2px white, 0 0 0 4px #f69038;
+          box-shadow: 0 0 0 2px white, 0 0 0 4px #f69038;
+}
+
+.table table .buttons .save:hover {
+  -webkit-box-shadow: 0 0 0 2px white, 0 0 0 4px #0f8ca8;
+          box-shadow: 0 0 0 2px white, 0 0 0 4px #0f8ca8;
+}
+/*# sourceMappingURL=table.css.map */

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+
+.footer {
+    width: 100%;
+    align-self: flex-end;
+    justify-self: center;
+    display: grid;
+    grid-template-rows: 30px 50px;
+    grid-template-columns: 1fr;
+    background-color: rgb(174, 136, 203);
+    color: rgb(255, 255, 255);
+    font-family: "Comfortaa", cursive;
+    justify-content: center;
+
+    @media screen and (min-width: 1200px) {
+        height: 10vh;
+        margin-top: 8vh;
+    }
+
+    @media screen and (max-width: 1199px) and (min-width: 1000px) {
+        height: 20vh;
+        margin-top: 12vh;
+    }
+
+    @media screen and (max-width: 999px) {
+        height: 40vw;
+        margin-top: 5vh;
+    }
+
+    &__h {
+        grid-row: 1/2;
+    }
+
+    &__contact {
+        grid-row: 2/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 24px;
+            margin-right: 5px;
+        }
+    }
+}
