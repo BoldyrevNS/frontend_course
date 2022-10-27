@@ -1,0 +1,55 @@
+/* Закрепление футера внизу */
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100%;
+    padding: 0;
+    margin: 0;
+    /* Шрифт */
+    font-family: 'Source Code Pro', monospace;
+    font-size: 17px;
+}
+wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+    /* Фон */
+    background-image: url(../img/mainPageBg1.jpg);
+    background-size: cover;
+}
+content {
+	flex: 1 0 auto;
+}
+footer {
+	flex: 0 0 auto;
+}
+
+.content-block{
+    /* Отступы */
+    margin: 5%;
+    padding: 5%;
+    /* Текст */
+    text-align: center;
+    color:ghostwhite;
+    /* Фон */
+    background: linear-gradient(rgb(62, 62, 65), rgb(48, 44, 45));
+    /* Тени */
+    box-shadow: 5px 5px 5px rgb(61, 60, 60);
+    text-shadow: rgb(2, 2, 2) 10px 10px 7px;
+}
+
+img{
+    /* Закругление углов изображения */
+    border-radius: 20px;
+}
+
+/* Шрифты */
+.d-inline{
+    font-size: 30px;
+}
+.content-title{
+    font-size: 24px;
+    font-family: fantasy;
+}
