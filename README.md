@@ -1,3 +1,3 @@
-# Ваш readme
+# Frontend course
 
-Укажите тематику
+#### Created by Borodin Roman from group PV-191
