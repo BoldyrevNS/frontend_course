@@ -1,0 +1,18 @@
+header {
+    background-color: #199C77;
+    color: #fff;
+}
+nav.navbar {
+    background-color: #199C77;
+    padding: 0;
+    height: 50px;
+}
+nav .nav-link {
+    color: #fff;
+}
+header .logo img{
+    width: 200px;
+}
+header nav {
+    margin-left: auto;
+}
