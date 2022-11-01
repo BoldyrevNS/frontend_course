@@ -20,3 +20,12 @@
     border-radius: 20px;
     padding: 10px;
 }
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #fff;
+}
