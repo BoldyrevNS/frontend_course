@@ -1,18 +1,3 @@
-class Hero{
-    constructor(){
-        this.name = ''
-        this.level = 1
-        this.params = {
-            strength: 1,
-            dexterity: 1,
-            physique: 1,
-            intelligence: 1,
-            wisdom: 1,
-            charisma: 1 
-        }
-        this.description = ''
-    }
-}
 
 let HeroSave = {
     name: 'Доктор Ливси',
