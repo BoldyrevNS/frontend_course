@@ -1,0 +1,18 @@
+body{
+    background: black;
+    height: 100%;
+}
+
+.authorization{
+    padding: 150px 0;
+}
+
+.input-password{
+    margin-top: 10px;
+}
+
+.btn-atrz {
+    margin-top: 10px;
+    margin-inside: 0px;
+    margin-bottom: 10px;
+}
