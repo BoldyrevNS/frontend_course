@@ -1,0 +1,22 @@
+.game{
+    background-color: rgba(143, 167, 123, 0.555);
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 15px 0;
+}
+
+.game img{
+    width: 200px;
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.game .description{
+    width: 200px;
+    margin: 0 auto;
+    background-color: rgba(26, 194, 115, 0.507);
+    border-radius: 20px;
+    padding: 10px;
+}

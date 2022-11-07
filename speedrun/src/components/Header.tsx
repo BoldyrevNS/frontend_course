@@ -8,11 +8,11 @@ const Header = () => {
         <header>
             <nav className="navbar navbar-expand-lg">
                 <div className="container">
-                    <a className="navbar-brand" href="/">
+                    <Link className="navbar-brand" to={'/'}>
                         <div className="logo">
                             <img src="https://www.speedrun.com/images/logo-white.png" alt="logo" />
                         </div>
-                    </a>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -25,7 +25,7 @@ const Header = () => {
                                 <Link className="nav-link" to={'/'}>News</Link>
                             </li>
                             <li className="navbar-item">
-                                <Link className="nav-link" to={'/'}>About</Link>
+                                <Link className="nav-link" to={'/about'}>About</Link>
                             </li>
                             <li className="navbar-item" v-if="!isAuth">
                                 <Link className="nav-link" to={'/'}>Log in</Link>

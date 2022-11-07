@@ -1,4 +1,5 @@
 from rest_framework import viewsets
+from rest_framework.views import APIView
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from main.models import Game, Run
@@ -12,15 +13,18 @@ class GameViewSet(viewsets.ModelViewSet):
 
 class RunViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
-        is_home = self.request.query_params.get('home', None)
-        if is_home:
-            return Run.objects.all().order_by('data')
+        game_id = self.request.query_params.get('game_id', None)
+        if game_id:
+            return Run.objects.filter(game__id=game_id)
         return Run.objects.all()
     
     def get_serializer_class(self):
-        is_home = self.request.query_params.get('home', None)
-        if is_home:
-            return RunFullSerializer
         return RunSerializer
 
+class HomeView(APIView):
+    def get(self, request, format=None):
+        qs = Run.objects.all().order_by('data')
+        if len(qs) > 18:
+            return RunFullSerializer(qs[:18])
+        return Response(RunFullSerializer(qs, many=True).data)
     

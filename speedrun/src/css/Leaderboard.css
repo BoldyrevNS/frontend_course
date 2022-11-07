@@ -1,0 +1,43 @@
+.leaderboard{ 
+    margin-top: 30px;  
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.leaderboard .table{
+    color: #fff;
+    background-color: #199c77ad;
+}
+td a{
+    color: #fff;
+}
+td a:hover{
+    color: #000;
+}
+.leaderboard .header{
+    height: 65px;
+    background-color: #199c77ad;
+    color: #fff;
+    display: flex;
+}
+.leaderboard .header h1{
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.leaderboard hr{
+    color: #fff;
+    margin: 0;
+    opacity: 1;
+}
+.leaderboard .ma{
+    margin: auto;
+}
+.leaderboard .btn-green{
+    color: #fff;
+    background-color: #199c77ad;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+.leaderboard .btn-green:hover{
+    background-color: #3ce2b3f3;
+}

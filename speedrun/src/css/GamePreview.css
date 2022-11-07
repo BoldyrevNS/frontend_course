@@ -1,0 +1,27 @@
+.game-content{
+    max-width: 1000px;
+    margin: 10px auto;
+}
+.game-content .widget-game{
+    display: flex;
+    border-top: 3px solid #199C77;
+    background-color: hsla(0,0%,100%,.075);
+    padding: 1rem;
+    color: #fff;
+}
+.widget-game .poster{
+    width: 80px;
+    margin-right: 1rem;
+}
+.game-content .widget-title{
+    height: fit-content;
+    margin-bottom: 10px;
+}
+.game-content .developer{
+    margin-bottom: 10px;
+}
+.meta{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
