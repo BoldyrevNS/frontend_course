@@ -3,21 +3,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/Leaderboard.css";
 import RunShort from '../models/RunShort';
 import { getRunsShort } from '../apis/runApi';
-import GameData from '../models/GameData';
 import Modal from './Modal';
+import CreateRun from './CreateRun';
 
 const get_time = (hour:number, minutes: number, seconds: number) => {
     return `${hour}h ${minutes}m ${seconds}s`
 }
 
-const Leaderboard = (game: GameData) =>{
+interface LeaderboardProps{
+    game_id: number,
+    rule: string
+}
+
+const Leaderboard = (props: LeaderboardProps) =>{
     const [runs, setRuns] = React.useState<RunShort[]>([])
     const [rule, setRule] = React.useState<boolean>(false)
     const [form, setForm] = React.useState<boolean>(false)
 
+    const addRun = (run: RunShort) =>{
+        setRuns(prev => [...prev, run])
+    }
+
     React.useEffect(()=>{
-        getRunsShort(setRuns, game.id)
-    }, [game.id])
+        getRunsShort(setRuns, props.game_id)
+    }, [props.game_id])
 
     const switchForm = () =>{
         setForm(!form)
@@ -29,11 +38,11 @@ const Leaderboard = (game: GameData) =>{
     return (
         <>
             {rule && <Modal title="Rules" onClose={switchRule}>
-            <p>{game.rule}</p>
+            <p>{props.rule}</p>
             </Modal>}
 
             {form && <Modal title="Add run" onClose={switchForm}>
-            <h1>Input</h1>
+            <CreateRun game_id={props.game_id} onAdd={addRun} />
             </Modal>}
     
         <div className="leaderboard">
@@ -58,7 +67,7 @@ const Leaderboard = (game: GameData) =>{
                 </thead>
                 <tbody>
                     {runs.map((run,index) => 
-                    <tr>
+                    <tr key={index}>
                         <th scope="row">{index+1}</th>
                         <td>{run.userName}</td>
                         <td>{get_time(run.hours, run.minutes, run.seconds)}</td>

@@ -16,7 +16,7 @@ class Run(models.Model):
     hours = models.PositiveIntegerField(default=0)
     minutes = models.PositiveIntegerField(default=0)
     seconds = models.PositiveIntegerField(default=0)
-    video = models.URLField(max_length=500)
+    video = models.CharField(max_length=500)
     userName = models.CharField(max_length=100)
 
 class News(models.Model):

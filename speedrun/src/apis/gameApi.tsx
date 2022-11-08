@@ -1,8 +1,9 @@
 import Axios, {AxiosError, AxiosResponse} from 'axios';
+import { baseURL } from '../constants';
 import GameData from '../models/GameData';
 
 
-const gamePath = 'http://localhost:8000/api/speedrun/games/'
+const gamePath = baseURL + '/speedrun/games/'
 
 export async function getGames(resultHandler: (data: any)=>void, id:string=''){
     if (!id.length){

@@ -15,8 +15,8 @@ const App = () => {
       <Header />
         <div className='wrapper'>
           <Routes>
-            <Route path="/" element={ <Home /> } />
-            <Route path='/games' element={<Games />} />
+            <Route path={'/'} element={ <Home /> } />
+            <Route path={'/games'} element={<Games />} />
             <Route path={'/game/:gameId'} element={<Game />} />
             <Route path={'/about'} element={<About />} />
           </Routes>

@@ -1,6 +1,4 @@
 interface RunShort{
-    id: number,
-    data: string,
     hours: number,
     minutes: number,
     seconds: number,

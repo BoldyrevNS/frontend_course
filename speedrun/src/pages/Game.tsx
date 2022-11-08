@@ -18,7 +18,7 @@ const Game = () => {
     return (
         <>
             <GamePreview {...gameData}/>
-            <Leaderboard {...gameData}/>
+            <Leaderboard game_id={gameData.id} rule={gameData.rule} />
         </>
     )
 }
