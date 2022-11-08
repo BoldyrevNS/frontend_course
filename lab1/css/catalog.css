@@ -1,0 +1,68 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 26px 25px;
+}
+
+.card__rating img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card{
+    height: auto;
+    background-color: #bd9dab;
+    padding: 8% 5%;
+}
+
+.checked {
+    color: orange;
+}
+
+.card__text {
+    font-size: 16px;
+    margin-bottom: 24px;
+    height: auto;
+}
+
+.card__radios {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.card__radio {
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.card__radio span {
+    width: 100%;
+    padding: 7px 0;
+    font-size: 12px;
+    background-color: #cecbcb;
+    font-family: "FuturaBookC";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 50px;
+
+}
+
+.card__price{
+    margin-left: 10%;
+}
+
+.card_button{
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 9px 10px;
+    margin-left: 9%;
+}
