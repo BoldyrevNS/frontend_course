@@ -1,0 +1,33 @@
+main {
+    padding-top: 15px;
+}
+
+.functions-list{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.function {
+    position: relative;
+    border: 2px solid rgb(222, 209, 236);
+    border-radius: 4px;
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+}
+
+.template-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.template-title{
+    font-size: larger;
+    text-align: center;
+    font-weight: bold;
+}

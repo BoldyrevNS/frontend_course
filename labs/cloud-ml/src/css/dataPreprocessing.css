@@ -1,0 +1,7 @@
+.btn-download:disabled{
+    background-color: rgb(234, 227, 241);
+    color: rgb(160, 150, 172);
+    border-radius: 4px;
+    border-color: rgb(222, 209, 236);
+    border-width: 2px;
+}

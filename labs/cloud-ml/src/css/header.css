@@ -1,0 +1,40 @@
+header {
+    background-color: rgb(143, 57, 235);
+}
+
+header .container {
+    position: relative;
+    height: 100%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+header .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+nav .nav-link {
+    color: #fff;
+}
+
+nav .nav-link:focus {
+    color: #fff;
+}
+
+header .logo{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-image{
+    margin: auto;
+}
+.logo-link{
+    text-align: center;
+}

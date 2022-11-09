@@ -1,0 +1,8 @@
+.result-default{
+    width: 100%;
+    border: 2px solid rgb(222, 209, 236);
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}

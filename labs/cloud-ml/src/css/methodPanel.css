@@ -1,0 +1,19 @@
+.load-send{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:inherit;
+}
+
+.file-form{
+    position: relative;
+    border: 2px solid rgb(222, 209, 236);
+    border-radius: 2px;
+    padding: 10px;
+    max-width: 400px;
+}
+
+.btn-send{
+    width: fit-content;
+}

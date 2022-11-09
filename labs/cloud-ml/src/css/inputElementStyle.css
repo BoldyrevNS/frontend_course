@@ -1,0 +1,26 @@
+.input-window{
+    border: 2px solid rgb(222, 209, 236);
+    background-color : rgb(234, 227, 241); 
+    border-radius: 3px;
+}
+
+.input-window:focus { 
+    outline: none !important;
+    border-color: rgb(143, 57, 235);
+ }
+
+ .tip{
+    width: 100%;
+    color: rgb(160, 150, 172);
+    font-size: 14px;
+ }
+
+ .tip-link{
+    color: rgb(160, 150, 172);
+    text-decoration: underline;
+ }
+
+ .tip-link:hover{
+    color: rgb(143, 57, 235);
+    text-decoration: none;
+ }

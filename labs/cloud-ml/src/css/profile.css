@@ -1,0 +1,16 @@
+main {
+    padding-top: 15px;
+}
+
+main .profile-list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .profile-title{
+    font-size: larger;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,20 @@
+.checkbox{
+    accent-color: rgb(143, 57, 235);
+}
+
+.checkbox-label{
+    color: black;
+}
+
+.checkbox-label:active{
+    color: rgb(80, 23, 139);
+}
+.checkbox-label:hover{
+    color: rgb(143, 57, 235)
+}
+.checkbox-box{
+    width: max-content;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
