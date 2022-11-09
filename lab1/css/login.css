@@ -1,0 +1,13 @@
+.login-form {
+    max-width: 400px;
+    margin: 25px auto;
+    background-color: #f2f2f2;
+    padding: 25px;
+    margin-top: 200px;
+}
+
+button.btn.btn-primary {
+    color: white;
+    background-color: #666666;
+    border-color: black;
+}
