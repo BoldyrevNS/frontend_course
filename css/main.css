@@ -1,0 +1,70 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+    background-color: #5d48bb;
+}
+
+html, body {
+	height: 100%;
+    padding: 0;
+    margin: 0;
+    /* Шрифт */
+    font-family: 'Source Code Pro', monospace;
+    font-size: 17px;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+    position: relative;
+	min-height: 100%;
+    background-image: url(../img/webBack.jpg);
+    background-size: cover;
+}
+
+content {
+	flex: 1 0 auto;
+}
+footer {
+	flex: 0 0 auto;
+}
+
+.content-block{
+    /* Отступы */
+    margin: 5%;
+    padding: 5%;
+    /* Текст */
+    text-align: center;
+    color:rgb(37, 37, 110);
+    /* Фон */
+    /* background: linear-gradient(rgb(2, 63, 15), rgb(187, 240, 64)); */
+    background: rgb(251, 252, 250);
+}
+
+img{
+    border-radius: 20px;
+}
+
+
+.d-inline{
+    font-size: 50px;
+}
+.content-title{
+    font-size: 24px;
+    font-family: fantasy;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
