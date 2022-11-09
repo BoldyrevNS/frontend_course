@@ -24,6 +24,8 @@ function starting(array: string|any[])
         }
         if (equals)
             s += c;
+        else
+            break;
     }
     return s;
 }
