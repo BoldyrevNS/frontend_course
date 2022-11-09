@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <title>Корзина</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="index.html">ASOS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalog.html">МУЖСКАЯ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalog.html">ЖЕНСКАЯ</a>
+                    </li>
+                </ul>
+                <form class="d-flex" style="width: 65%">
+                    <input class="form-control" ty%pe="search" placeholder="Поиск" aria-label="Search">
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="auth.html">ВОЙТИ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorites.html">ИЗБРАННОЕ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="basket.html">КОРЗИНА</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="container basket-container">
+        <div class="basket-list">
+            <div class="basket-card text-dark align-items-center mb-3">
+                <div><img class="basket-img" src="../assets/product1.webp" alt=""></div>
+                <div class="">
+                    <h5 class="card-title">The North Face 100 Glacier</h5>
+                    <h5 class="card-title">3000 ₽</h5>
+                    <p>Комуфляжный М</p>
+                    <button type="button" class="btn btn-dark row-auto">Добавить в избранное</button>
+                </div>
+                <a href="#" class="x-container">
+                    <img src="x.svg" alt="" class="x-icon">
+                </a>
+            </div> 
+            <div class="basket-card text-dark align-items-center">
+                <div><img class="basket-img" src="../assets/product1.webp" alt=""></div>
+                <div class="">
+                    <h5 class="card-title">The North Face 100 Glacier</h5>
+                    <h5 class="card-title">3000 ₽</h5>
+                    <p>Комуфляжный М</p>
+                    <button type="button" class="btn btn-dark row-auto">Добавить в избранное</button>
+                </div>
+                <a href="#" class="x-container">
+                    <img src="x.svg" alt="" class="x-icon">
+                </a>
+            </div>    
+        </div>
+        <div>
+            <span style="font-weight: bold;">Итог</span>
+            <p style="margin-top: 1rem;"><span style="font-weight: bold;">Промежуточный итог</span> 6000 ₽</p>
+            <p><span style="font-weight: bold;">Скидка</span> 0 ₽</p>
+            <button type="button" class="btn btn-dark row-auto">Оформить заказ</button>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white">
+        <div class="row justify-content-between">
+            <p class="col-auto my-4">© БГТУ, 2022</p>
+            <p class="col-auto my-4">+7 (777) 777-77-77</p>
+        </div>
+    </div>
+</body>
+</html>
