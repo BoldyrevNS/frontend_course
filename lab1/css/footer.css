@@ -1,0 +1,14 @@
+footer {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    color: #fff;
+    height: 60px;
+    flex: 0 0 auto;
+}
+
+footer .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

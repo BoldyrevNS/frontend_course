@@ -1,0 +1,28 @@
+.service-list .service {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.service-list .service .service-title {
+    margin: 5px 0px;
+    font-size: 24px;
+}
+
+.service-list .service .service-description {
+    padding: 3px;
+    font-size: 18px;
+}
+
+.service-list .service .image {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+  
+.service-list .service .image  .personalImage {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}

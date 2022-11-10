@@ -1,0 +1,46 @@
+.contacts {
+    width: 100%;
+	float: left;
+	padding-bottom: 40px;
+	padding-top: 30px;
+}
+
+#form_input {
+	margin-top: 15px;
+	width: 35%;
+	font-size: 1.1em;
+}
+
+#form_input label {
+	cursor: pointer;
+}
+
+#form_input label > span {
+	color: #e87e7e;
+}
+
+#form_input input,#form_input textarea {
+	margin-bottom: 10px;
+	width: 70%;
+	padding: 10px 2%;
+	border-radius: 7px;
+	border: 2px solid silver;
+	font-size: 0.9em;
+	color: #4a4a4a;
+}
+
+#form_input input:focus, #form_input textarea:focus {
+	border-color: #333;
+}
+
+.btn {
+	float: left;
+	border-radius: 5px;
+	padding: 5px 9px;
+	font-size: 1.2em;
+	background-color: #ec6550;
+	text-shadow: #454545 0 0 2px;
+	cursor: pointer;
+	color: white;
+	font-family: 'Roboto Slab', serif;
+}

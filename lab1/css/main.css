@@ -1,0 +1,43 @@
+
+
+/*Главный блок на сайте*/
+
+#top {
+    width: 100%;
+    background-image: url("../resources/img/strong.jpg");
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+@media (min-width: 1001px) {
+    #top {
+        font-size: 3em;
+        height: 1000px;
+    }
+}
+
+@media (max-width: 1000px) and (mim-width: 651px){
+   #top {
+       font-size: 2em;
+       height: 600px;
+   }
+}
+
+@media (max-width: 650px) {
+#top {
+    font-size: 1.3em;
+    padding-top: 50%;
+    height: 500px;
+}
+}
+
+#top h1 {
+    padding-top: 20%;
+}
+
+#top h3 {
+    color: #ccc;
+}
