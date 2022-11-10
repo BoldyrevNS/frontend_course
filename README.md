@@ -1,4 +1,4 @@
 > Студентка группы ПВ192, Михайлюкова Дарья
 ## Тематика сайта: фитнес центр
 
-[Ссылка на сайт на pages](https://mikhaylyukovada22pv192.github.io/)1
+[Ссылка на сайт на pages](https://mikhaylyukovada22pv192.github.io/)
