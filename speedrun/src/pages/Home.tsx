@@ -15,7 +15,9 @@ const Home = () => {
     return (
         <>
             <Widget title='LATEST RUNS'>
-                { runData.map(run => <RunCard {...run} key={run.id} />) }
+                <div className='row'>
+                    { runData.map(run => <RunCard {...run} key={run.id} />) }
+                </div>
             </Widget>
         </>
         

@@ -5,8 +5,12 @@ import RunShort from '../models/RunShort';
 import { getRunsShort } from '../apis/runApi';
 import Modal from './Modal';
 import CreateRun from './CreateRun';
+import authContext from './AuthContext';
 
 const get_time = (hour:number, minutes: number, seconds: number) => {
+    if (hour===0){
+        return `${minutes}m ${seconds}s`
+    }
     return `${hour}h ${minutes}m ${seconds}s`
 }
 
@@ -19,17 +23,19 @@ const Leaderboard = (props: LeaderboardProps) =>{
     const [runs, setRuns] = React.useState<RunShort[]>([])
     const [rule, setRule] = React.useState<boolean>(false)
     const [form, setForm] = React.useState<boolean>(false)
+    const [mustUpdate, setMustUpdate] = React.useState<boolean>(false)
+    const auth_context = React.useContext(authContext);
 
     const addRun = (run: RunShort) =>{
-        setRuns(prev => [...prev, run])
+        setMustUpdate(!mustUpdate)
     }
 
     React.useEffect(()=>{
         getRunsShort(setRuns, props.game_id)
-    }, [props.game_id])
+    }, [props.game_id, mustUpdate])
 
     const switchForm = () =>{
-        setForm(!form)
+        setForm(prev=>!prev)
     }
     const switchRule = () =>{
         setRule(!rule)
@@ -41,9 +47,14 @@ const Leaderboard = (props: LeaderboardProps) =>{
             <p>{props.rule}</p>
             </Modal>}
 
-            {form && <Modal title="Add run" onClose={switchForm}>
-            <CreateRun game_id={props.game_id} onAdd={addRun} />
+            {auth_context?.isAuth && form && <Modal title="Add run" onClose={switchForm}>
+            <CreateRun game_id={props.game_id} onAdd={addRun} closeModal={switchForm}/>
             </Modal>}
+
+            {!auth_context?.isAuth && form && <Modal title="Add run" onClose={switchForm}>
+                <h3>Log in or sign up</h3>
+            </Modal>}
+
     
         <div className="leaderboard">
             <div className="header">
@@ -54,6 +65,7 @@ const Leaderboard = (props: LeaderboardProps) =>{
                 <div className="ma">
                     <button onClick={switchForm} type="submit" className="btn-green">Run</button>
                 </div>
+                
             </div>
             <hr/>
             <table className="table">

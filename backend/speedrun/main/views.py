@@ -26,5 +26,5 @@ class HomeView(APIView):
         qs = Run.objects.all().order_by('-data')
         if len(qs) > 18:
             return Response(RunFullSerializer(qs[:18], many=True).data)
-        return Response(RunSerializer(qs, many=True).data)
+        return Response(RunFullSerializer(qs, many=True).data)
     

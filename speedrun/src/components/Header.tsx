@@ -1,15 +1,19 @@
 import React from 'react';
 import "../css/Header.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/js/dist/collapse'
 import { Link } from "react-router-dom";
+import { Logout } from '../apis/logoutApi';
+import authContext from './AuthContext';
 
 const Header = () => {
+    const isLogin = React.useContext(authContext);
     return (
         <header>
             <nav className="navbar navbar-expand-lg">
-                <div className="container">
+                <div className="container p-0">
                     <Link className="navbar-brand" to={'/'}>
-                        <div className="logo">
+                        <div className="logo ms-4">
                             <img src="https://www.speedrun.com/images/logo-white.png" alt="logo" />
                         </div>
                     </Link>
@@ -27,9 +31,26 @@ const Header = () => {
                             <li className="navbar-item">
                                 <Link className="nav-link" to={'/about'}>About</Link>
                             </li>
-                            <li className="navbar-item" v-if="!isAuth">
-                                <Link className="nav-link" to={'/'}>Log in</Link>
-                            </li>
+                            { !isLogin?.isAuth &&
+                                <li className="navbar-item">
+                                    <Link className="nav-link" to={'/login'}>Log in</Link>
+                                </li>
+                            }
+                            { !isLogin?.isAuth &&
+                                <li className="navbar-item">
+                                    <Link className="nav-link" to={'/signup'}>Sign up</Link>
+                                </li>
+                            }
+                            { isLogin?.isAuth &&
+                                <li className="navbar-item">
+                                    <Link className="nav-link" to='/login' onClick={
+                                        ()=>{
+                                            Logout()
+                                            isLogin.setAuth(false)
+                                        }
+                                        }>Log out</Link>
+                                </li>
+                            }
                         </ul>
                     </div>
                 </div>
@@ -39,3 +60,4 @@ const Header = () => {
 }
 
 export default Header;
+

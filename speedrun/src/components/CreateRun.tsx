@@ -9,6 +9,7 @@ import runValidate from '../validations/runValidate';
 interface CreateRunProps{
     game_id: number,
     onAdd: (data: RunShort) => void
+    closeModal: () => void
 }
 
 export interface MyFormValues {
@@ -28,6 +29,7 @@ const CreateRun = (props:CreateRunProps) =>{
     
     const onSubmit = (values:MyFormValues)=>{
         postRun(props.onAdd, values, props.game_id);
+        props.closeModal()
     }
 
     return (
@@ -40,23 +42,23 @@ const CreateRun = (props:CreateRunProps) =>{
          <Form className='run-form'>
             <div className='form-input'>
                     <div className='form-label'><label htmlFor="link">Link</label></div>
-                    <Field id="link" name="link" placeholder="Input link"/>
+                    <Field className='form-control' id="link" name="link" placeholder="Input link"/>
                     {errors.link && touched.link && <div className='text-danger'>{errors.link}</div>}   
                     
                     <div className='form-label'><label htmlFor="hour">Hour</label></div>   
-                    <Field id="hour" name="hour" placeholder="Input hour" />
+                    <Field className='form-control' id="hour" name="hour" placeholder="Input hour" />
                     {errors.hour && touched.hour && <div className='text-danger'>{errors.hour}</div>} 
 
                     <div className='form-label'><label htmlFor="minutes">Minutes</label></div>    
-                    <Field id="minutes" name="minutes" placeholder="Input minutes" />
+                    <Field className='form-control' id="minutes" name="minutes" placeholder="Input minutes" />
                     {errors.minutes && touched.minutes && <div className='text-danger'>{errors.minutes}</div>} 
 
                     <div className='form-label'><label htmlFor="seconds">Seconds</label></div>    
-                    <Field id="seconds" name="seconds" placeholder="Input seconds" />
+                    <Field className='form-control' id="seconds" name="seconds" placeholder="Input seconds" />
                     {errors.seconds && touched.seconds && <div className='text-danger'>{errors.seconds}</div>} 
             </div>
             <div className='form-button'>
-                <button type="submit">Add run</button>
+                <button className='btn btn-success' type="submit">Add run</button>
             </div>
          </Form>
         )}

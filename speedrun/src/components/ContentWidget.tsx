@@ -14,7 +14,7 @@ const Widget = ({children, title}: WidgetProps) =>{
                 <div className="widget-title">{title}</div>
             </div>
             <div className="widget-body">
-                <div className="runs-list row">    
+                <div className="runs-list">    
                     {children}
                 </div>
             </div>    

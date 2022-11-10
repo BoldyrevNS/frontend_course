@@ -18,5 +18,11 @@
     margin: 0 auto;
     background-color: rgba(26, 194, 115, 0.507);
     border-radius: 20px;
-    padding: 10px;
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+.description p{
+    margin-bottom: 0;
 }

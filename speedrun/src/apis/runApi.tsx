@@ -27,7 +27,7 @@ export async function postRun(resultHandler:(run: RunShort)=>void, data:MyFormVa
         minutes: data.minutes,
         seconds: data.seconds,
         video: data.link,
-        userName: 'test',
+        userName: localStorage.getItem('username'),
         game: game_id
     }
     Axios.post<RunShort>(

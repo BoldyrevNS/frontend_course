@@ -16,3 +16,7 @@ header .logo img{
 header nav {
     margin-left: auto;
 }
+
+.navbar-collapse{
+    background-color: #199C77;
+}

@@ -15,7 +15,9 @@ const Games = () => {
     return (
         <>
             <Widget title='Games'>
-                { gameData.map(game => <GameCard {...game} key={game.id} />) }
+                <div className='row'>
+                    { gameData.map(game => <GameCard {...game} key={game.id} />) }   
+                </div>
             </Widget>
         </>
     )
