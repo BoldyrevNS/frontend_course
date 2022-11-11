@@ -45,13 +45,13 @@
         <div class="row justify-content-center">
             <h1 class="col-auto">ASOS</h1>
         </div>
-        <form action="">
+        <form class='formWithValidation'>
             <label for="InputLogin" class="form-label mt-4">Логин</label>
-            <input type="email" class="form-control" id="InputLogin">
+            <div class="loginField"><input type="text" class="form-control" id="InputLogin"></div>
             <label for="InputPassword" class="form-label mt-4">Пароль</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
+            <div class="passwordField"><input type="text" class="form-control" id="InputPassword"></div>
             <div class="row justify-content-center my-4">
-                <button type="button" class="btn btn-dark col-auto">Зарегистрироваться</button>
+                <button type="submit" class="btn btn-dark col-auto">Зарегистрироваться</button>
             </div>
         </form>
     </div>
@@ -62,4 +62,5 @@
         </div>
     </div>
 </body>
+<script src="../js/registration.js"></script>
 </html>
