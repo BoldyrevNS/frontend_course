@@ -1,0 +1,12 @@
+.widget-news{
+    max-width: 1000px;
+    color: #fff;
+    margin: 0 auto;
+}
+.widget-news .title{
+    text-align: left;
+}
+.widget-news a{
+    text-decoration: none;
+    color: #fff;
+}

@@ -22,5 +22,6 @@ class Run(models.Model):
 class News(models.Model):
     header = models.CharField(max_length=100)
     preview = models.CharField(max_length=255)
+    img = models.URLField(max_length=500, null=True)
     text = models.TextField()
     date = models.DateField(default=today)

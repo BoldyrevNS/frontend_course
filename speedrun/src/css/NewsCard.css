@@ -1,0 +1,23 @@
+.news{
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: rgb(37 47 55);
+}
+.news img{
+    height: 200px;
+    width: 100%;
+}
+.description{
+    text-align: left;
+    padding: 10px;
+}
+.date{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.summary{
+    font-size: 13px;
+}
+.title{
+    font-weight: 600;
+}

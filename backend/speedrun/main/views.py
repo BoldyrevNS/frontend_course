@@ -2,8 +2,9 @@ from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from main.models import Game, Run
-from main.serializers import GameSerializer, RunSerializer, RunFullSerializer
+from main.models import Game, Run, News
+from main.serializers import (GameSerializer, RunSerializer, 
+                                RunFullSerializer, NewsSerializer)
 
 
 class GameViewSet(viewsets.ModelViewSet):
@@ -27,4 +28,11 @@ class HomeView(APIView):
         if len(qs) > 18:
             return Response(RunFullSerializer(qs[:18], many=True).data)
         return Response(RunFullSerializer(qs, many=True).data)
+
+class NewsViewSet(viewsets.ModelViewSet):
+    def get_queryset(self):
+        return News.objects.all()
+    def get_serializer_class(self):
+        return NewsSerializer
+
     

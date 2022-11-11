@@ -11,6 +11,8 @@ import About from '../pages/About';
 import Login from '../pages/Login';
 import AuthContext from './AuthContext';
 import Signup from '../pages/Signup';
+import ListOfNews from '../pages/ListOfNews';
+import News from '../pages/News';
 
 
 const App = () => {
@@ -29,6 +31,8 @@ const App = () => {
               <Route path={'/about'} element={<About />} />
               <Route path={'/login'} element={<Login />} />
               <Route path={'/signup'} element={<Signup />} />
+              <Route path={'/news'} element={<ListOfNews />} />
+              <Route path={'/news/:newsId'} element={<News />} />
             </Routes>
           
           </div>

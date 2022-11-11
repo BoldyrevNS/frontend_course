@@ -1,0 +1,28 @@
+.news-page{
+    max-width: 1000px;
+    background: rgb(37, 47, 55);
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: left;
+    color: #fff;
+}
+.news-page .date{
+    text-transform: uppercase;
+}
+.news-page .title{
+    font-weight: 500;
+}
+.news-page .poster{
+    width: 100%;
+    text-align: center;
+}
+.news-page img{
+    max-width: 80%;
+}
+.news-page .main{
+    padding-top: 15px;
+}
+.news-page h3{
+    text-transform: uppercase;
+    font-weight: 500;
+}
