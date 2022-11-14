@@ -11,7 +11,7 @@ function DataPreprocessing() {
     const [selectedFile, setSelectedFile] = React.useState<null | any>(null);
     const [filename, setFilename] = React.useState<string>('');
     const [csvUrl, setCsvUrl] = React.useState<string>('');
-    const handleSubmit = (event: any) => {
+    const handleSubmit = async (event: any) => {
         event.preventDefault()
         if (selectedFile == null) {
             alert('Загрузите файл формата *.csv');
@@ -21,7 +21,14 @@ function DataPreprocessing() {
         const formData = new FormData();
         formData.append(`${selectedFile.name}`, selectedFile);
 
-        postPreprocessing(setCsvUrl, formData);
+        const result: Blob | null = await postPreprocessing(formData, sessionStorage.getItem('user'));
+        
+        if(result !== null){
+            let data: Blob = new Blob([result], {
+                type: 'text/csv'
+            });
+            setCsvUrl(window.URL.createObjectURL(data))
+        }
     }
 
     const handleFileSelect = (event: any) => {

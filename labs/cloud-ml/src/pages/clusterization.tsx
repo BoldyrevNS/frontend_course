@@ -6,10 +6,10 @@ import Header from "../components/header";
 import CheckBox, {CheckBoxData} from '../components/checkBox';
 import ImagePlace from '../components/imagePlace';
 import NumberInput from '../components/numberInput';
-import InputData from '../inputData';
+import InputData from '../models/inputData';
 import StringOutput from '../components/stringOutput';
-import OutputData from '../outputData';
-import { getImage } from '../apis/imageApi';
+import OutputData from '../models/outputData';
+import { getImage } from '../apis/fileApi';
 import { postClusterization } from '../apis/taskApi';
 
 interface ClusterizationData{
@@ -35,12 +35,17 @@ function Clusterization() {
         if (clusterizationData!.image_name === "") {
             return;
         }
-        getImage( setImage, clusterizationData!.image_name);
+
+        const get_image = async () => {
+            const image = await getImage(clusterizationData!.image_name, sessionStorage.getItem('user'));
+            setImage(image)
+        }
+        get_image()
     },
         [clusterizationData]
     );
 
-    const handleSubmit=(event: any) =>{
+    const handleSubmit = async (event: any) =>{
         event.preventDefault()
         if (selectedFile == null) {
             alert('Загрузите файл формата *.csv');
@@ -53,8 +58,12 @@ function Clusterization() {
 
         const formData = new FormData();
         formData.append(`${selectedFile.name}`, selectedFile);
+        const result: ClusterizationData | null = await postClusterization(formData, sessionStorage.getItem('user'), clustersNumber, withCenters);
+        
+        if(result !== null){
+            setClusterizationData((oldData: Object) => ({ ...oldData, ...result }))
+        }
 
-        postClusterization(setClusterizationData, formData, clustersNumber, withCenters);
     }
 
     const handleFileSelect = (event: any) => {

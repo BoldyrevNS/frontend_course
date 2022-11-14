@@ -11,6 +11,7 @@ function UnLoginButton() {
     function HandleMouseEvent(){
         navigate('/login');
         auth_context!.setAuthenticated(false);
+        localStorage.setItem('user', '')
     };
 
     return (

@@ -12,10 +12,10 @@ import Distribution from './pages/distribution';
 import DataPreprocessing from './pages/dataPreprocessing';
 import Clusterization from './pages/clusterization';
 import Correlation from './pages/correlation';
+import Registration from './pages/registration';
 
 
 function App() {
-
   const [authenticated, setAuthenticated] = React.useState<boolean>(false);
 
   return (
@@ -25,6 +25,7 @@ function App() {
           <Route path="/" element={ <Home /> } />
           <Route path="/profile" element={ <Profile /> } />
           <Route path="/login" element={ <Login /> } />
+          <Route path="/registration" element={ <Registration /> }/>
           <Route path="/regression" element={ <Regression />} />
           <Route path="/distribution" element={ <Distribution /> } />
           <Route path="/data-preprocessing" element={ <DataPreprocessing />} />

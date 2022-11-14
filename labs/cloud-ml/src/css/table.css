@@ -2,3 +2,16 @@
 .table-striped>tbody>tr:nth-child(odd)>th {
     background-color: rgb(222, 209, 236);
 }
+
+.history-link{
+    color: rgb(143, 57, 235);
+    text-decoration: none;
+}
+
+.history-link:hover{
+    color: rgb(80, 23, 139);
+}
+
+.history-link:active{
+    color: rgb(80, 23, 139);
+}

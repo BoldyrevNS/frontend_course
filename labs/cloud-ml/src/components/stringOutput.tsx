@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/inputElementStyle.css';
-import OutputData from '../outputData';
+import OutputData from '../models/outputData';
 
 function StringOutput(props: OutputData) {
 

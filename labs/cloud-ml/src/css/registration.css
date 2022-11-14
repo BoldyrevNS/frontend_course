@@ -6,7 +6,7 @@ main .title{
     text-align: center;
 }
 
-.login-form{
+.reg-form{
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -19,30 +19,11 @@ main .title{
     max-width: 400px;
 }
 
-.btn-login {
+.btn-reg {
     margin-bottom: auto;
 }
 
-.login-form .errors {
+.reg-form .errors {
     color: red;
 }
-
-
-.reg-tip{
-    align-items: center;
-    position: relative;
-    padding: inherit;
-    display: flex;
-    flex-direction: column;
-}
-
-.reg-link{
-    text-decoration: none;
-    color: rgb(160, 150, 172);
-}
-
-.reg-link:hover{
-    color: rgb(143, 57, 235);
-}
-
 

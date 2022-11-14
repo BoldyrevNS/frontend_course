@@ -3,12 +3,12 @@ import '../css/operationTemplateComponent.css';
 import '../css/distribution.css';
 import MethodPanel from '../components/methodPanel';
 import Header from "../components/header";
-import { getImage } from '../apis/imageApi';
+import { getImage } from '../apis/fileApi';
 import ImagePlace from '../components/imagePlace';
 import { postDistribution } from '../apis/taskApi';
-import InputData from '../inputData';
+import InputData from '../models/inputData';
 import StringInput from '../components/stringInput';
-import OutputData from '../outputData';
+import OutputData from '../models/outputData';
 import StringOutput from '../components/stringOutput';
 
 interface DistributionData {
@@ -18,21 +18,23 @@ interface DistributionData {
 }
 
 function Distribution() {
-    // eslint-disable-next-line
-    const [distributionData, setDistributionData] = React.useState<DistributionData>({ image_name: "", name: null , distribution_type: null});
+    const [distributionData, setDistributionData] = React.useState<DistributionData>({ image_name: "", name: null, distribution_type: null });
     const [selectedFile, setSelectedFile] = React.useState<null | any>(null);
     const [image, setImage] = React.useState<null | any>(null);
     const [columnName, setColumnName] = React.useState<string | null>(null);
     React.useEffect(() => {
         if (distributionData!.image_name === "") {
-                return;
+            return;
         }
-        console.log(distributionData)
-        getImage( setImage, distributionData!.image_name);
+        const get_image = async () => {
+            const image = await getImage(distributionData!.image_name, sessionStorage.getItem('user'));
+            setImage(image)
+        }
+        get_image()
     },
         [distributionData]
     );
-    const handleSubmit=(event: any) =>{
+    const handleSubmit = async (event: any) => {
         event.preventDefault()
         if (selectedFile == null) {
             alert('Загрузите файл формата *.csv');
@@ -41,8 +43,11 @@ function Distribution() {
 
         const formData = new FormData();
         formData.append(`${selectedFile.name}`, selectedFile);
+        const result: DistributionData | null = await postDistribution(formData, sessionStorage.getItem('user'), columnName);
 
-        postDistribution(setDistributionData, formData, columnName);
+        if (result !== null) {
+            setDistributionData((oldData: Object) => ({ ...oldData, ...result }))
+        }
     }
 
     const handleFileSelect = (event: any) => {
@@ -55,7 +60,7 @@ function Distribution() {
     }
 
     const handleColumnName = (event: any) => {
-        setColumnName(event.target.value)
+        setColumnName(event.target.value.trim())
     }
 
     const inputColumnName: InputData = {
@@ -66,14 +71,14 @@ function Distribution() {
         onChangeHandle: handleColumnName
     };
 
-    let outputColumnName: OutputData ={
+    let outputColumnName: OutputData = {
         mainLabel: 'Имя столбца',
         defaultValue: 'Здесь будет имя столбца, по которому было распределение',
         tipLabel: 'Без заданного имени столбца берётся первый числовой столбец',
         value: null
     }
 
-    let outputDistributionType: OutputData ={
+    let outputDistributionType: OutputData = {
         mainLabel: 'Тип распределения',
         defaultValue: 'Здесь будет тип самого подходящего распределения',
         value: null
@@ -104,8 +109,8 @@ function Distribution() {
                                 Результат
                             </div>
                             <ImagePlace image={image} />
-                            <StringOutput {...outputColumnName} {...{value: distributionData.name}} />
-                            <StringOutput {...outputDistributionType} {...{value: distributionData.distribution_type}} />
+                            <StringOutput {...outputColumnName} {...{ value: distributionData.name }} />
+                            <StringOutput {...outputDistributionType} {...{ value: distributionData.distribution_type }} />
                         </div>
                     </div>
                 </section>

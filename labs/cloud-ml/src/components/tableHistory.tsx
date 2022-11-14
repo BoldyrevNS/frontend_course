@@ -1,10 +1,13 @@
 import "../css/table.css";
-import operationsHistory from "../data_history";
+
+import OperationHistory from "../models/operationHistory";
 import OperationHistoryComponent from "./operationHistoryComponent";
+interface Operations{
+    data: OperationHistory[]
+}
+function TableHistory(props: Operations){
 
-function TableHistory(){
-
-    let operationsHistoryComponents: JSX.Element[] = operationsHistory.map(value => 
+    let operationsHistoryComponents: JSX.Element[] = props.data.map(value => 
         <OperationHistoryComponent 
         key={value.id} 
         id={value.id} 

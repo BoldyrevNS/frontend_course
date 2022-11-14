@@ -9,7 +9,7 @@ import authContext from "../authContext";
 function Header (){
     const isLogin = React.useContext(authContext);
     let link: string = '/login';
-    if (isLogin!.authenticated) {
+    if (isLogin!.authenticated || sessionStorage.getItem('user')!=null) {
         link = '/profile';
     }
     return (

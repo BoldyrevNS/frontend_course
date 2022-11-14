@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Operation from '../operation';
+import Operation from '../models/operation';
 import '../css/button_default.css';
 import '../css/operation_component.css';
 import { Link } from 'react-router-dom';

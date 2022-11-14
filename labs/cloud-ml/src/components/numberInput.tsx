@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/inputElementStyle.css';
-import InputData from '../inputData';
+import InputData from '../models/inputData';
 
 function NumberInput(props: InputData) {
     let input: JSX.Element =<input type="number" className="w-100 input-window" name={props.fieldName} placeholder={props.defaultValue} onChange={event=>props.onChangeHandle(event)}/>;

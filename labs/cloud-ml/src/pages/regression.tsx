@@ -3,10 +3,10 @@ import '../css/operationTemplateComponent.css';
 import '../css/regression.css';
 import MethodPanel from '../components/methodPanel';
 import Header from "../components/header";
-import { getImage } from '../apis/imageApi';
+import { getImage } from '../apis/fileApi';
 import ImagePlace from '../components/imagePlace';
-import InputData from '../inputData';
-import OutputData from '../outputData';
+import InputData from '../models/inputData';
+import OutputData from '../models/outputData';
 import StringOutput from '../components/stringOutput';
 import StringInput from '../components/stringInput';
 import { postRegression } from '../apis/taskApi';
@@ -19,7 +19,6 @@ interface RegressionData {
 }
 
 function Regression() {
-    // eslint-disable-next-line
     const [regerssionData, setRegressionData] = React.useState<RegressionData>({ image_name: "", name_x: null, name_y: null });
     const [selectedFile, setSelectedFile] = React.useState<null | any>(null);
     const [image, setImage] = React.useState<null | any>(null);
@@ -30,12 +29,15 @@ function Regression() {
         if (regerssionData!.image_name === "") {
             return;
         }
-        console.log(regerssionData)
-        getImage(setImage, regerssionData!.image_name);
+        const get_image = async () => {
+            const image = await getImage(regerssionData!.image_name, sessionStorage.getItem('user'));
+            setImage(image)
+        }
+        get_image()
     },
         [regerssionData]
     );
-    const handleSubmit = (event: any) => {
+    const handleSubmit = async (event: any) => {
         event.preventDefault()
         if (selectedFile == null) {
             alert('Загрузите файл формата *.csv');
@@ -49,8 +51,12 @@ function Regression() {
 
         const formData = new FormData();
         formData.append(`${selectedFile.name}`, selectedFile);
+        const result: RegressionData | null = await postRegression(formData, sessionStorage.getItem('user'), polynomialOrder, columnNameX, columnNameY);
 
-        postRegression(setRegressionData, formData, polynomialOrder, columnNameX, columnNameY);
+        if (result !== null) {
+            setRegressionData((oldData: Object) => ({ ...oldData, ...result }))
+        }
+        
     }
 
 
@@ -67,9 +73,9 @@ function Regression() {
     const handleColumnName = (event: any) => {
         event.preventDefault()
         if (event.target.name === 'column_name_x') {
-            setColumnNameX(event.target.value)
+            setColumnNameX(event.target.value.trim())
         } else {
-            setColumnNameY(event.target.value)
+            setColumnNameY(event.target.value.trim())
         }
 
     }

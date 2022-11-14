@@ -7,13 +7,14 @@ from aiohttp import web, BodyPartReader
 
 from .handles_template import HandlesTemplate
 from utils import get_corr_matrix, get_only_numeric_columns, get_the_most_corr_columns
-from images import image_base_path
+
+from images import save_figure_image
 
 
 class HandleRegression(HandlesTemplate):
 
     def __init__(self):
-        super().__init__()
+        super().__init__('regression')
         self.order: int = 1
         self.column_x: str = ''
         self.column_y: str = ''
@@ -32,17 +33,17 @@ class HandleRegression(HandlesTemplate):
             self.column_y = request.rel_url.query.get('column_y')
         return True, None
 
-    async def work_with_df(self, request: web.Request, field: BodyPartReader) -> web.Response:
+    async def work_with_df(self, request: web.Request, field: BodyPartReader) -> tuple:
         df: pd.DataFrame = get_only_numeric_columns(self.df)
 
         if len(df.columns) <= 1:
-            return web.Response(status=415, text=f"Недостаточно переменных для регресии")
+            return web.Response(status=415, text=f"Недостаточно переменных для регресии"), None, None
 
         if self.column_x != '' and self.column_x not in df.columns:
-            return web.Response(status=415, text=f"Столбец '{self.column_x}' не является числовым")
+            return web.Response(status=415, text=f"Столбец '{self.column_x}' не является числовым"), None, None
 
         if self.column_y != '' and self.column_y not in df.columns:
-            return web.Response(status=415, text=f"Столбец '{self.column_y}' не является числовым")
+            return web.Response(status=415, text=f"Столбец '{self.column_y}' не является числовым"), None, None
 
         column_name_x: str = ''
         column_name_y: str = ''
@@ -88,16 +89,16 @@ class HandleRegression(HandlesTemplate):
                 logging.getLogger('aiohttp.server').info(
                     f'The most correlated columns: {corr_matrix.columns[header_max]} and {corr_matrix.columns[i_max]}')
 
-        image_name = f"{field.name[:field.name.find('.csv')]}_regression.png"
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(10, 10))
         sbn.regplot(x=column_name_x, y=column_name_y, data=df, ax=ax, order=self.order, truncate=True,
                     line_kws={"color": "#8f39eb"}, scatter_kws={'color':'#a766ed'})
-        fig.savefig(image_base_path + image_name)
-        plt.close(fig)
+
+        image_name = f"{field.name[:field.name.find('.csv')]}.png"
+        img_inner = save_figure_image(self.base_name, self.user, fig)
 
         response: dict = dict()
-        response['image_name'] = image_name
+        response['image_name'] = img_inner
         response['name_x'] = column_name_x
         response['name_y'] = column_name_y
-        return web.json_response(text=json.dumps(response))
+        return web.json_response(text=json.dumps(response)), img_inner, image_name
 
