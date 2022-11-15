@@ -11,14 +11,18 @@ import GalleryPic from "./GalleryPic";
 export default {
   name: "Gallery",
   components: {GalleryPic},
+
   data() {
     return {
       images_info: []
     }
   },
   created() {
-    this.$http.get('/gallery/list')
-      .then((response) => this.images_info = response.data)
+    let req = new XMLHttpRequest();
+    req.responseType = 'json';
+    req.open("GET", '/api/gallery/list', true);
+    req.send();
+    req.onload = () => this.images_info = req.response;
   }
 }
 </script>
