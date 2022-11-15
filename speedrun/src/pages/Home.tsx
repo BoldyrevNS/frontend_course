@@ -13,14 +13,11 @@ const Home = () => {
     }, [])
 
     return (
-        <>
-            <Widget title='LATEST RUNS'>
-                <div className='row'>
-                    { runData.map(run => <RunCard {...run} key={run.id} />) }
-                </div>
-            </Widget>
-        </>
-        
+        <Widget title='LATEST RUNS'>
+            <div className='row'>
+                { runData.map(run => <RunCard {...run} key={run.id} />) }
+            </div>
+        </Widget>
     )
 }
 

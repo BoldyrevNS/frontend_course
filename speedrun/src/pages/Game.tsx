@@ -7,7 +7,6 @@ import GamePreview from '../components/GamePreview';
 import Leaderboard from '../components/Leaderboard';
 
 
-
 const Game = () => {
     const {gameId} = useParams()
     const [gameData, setGameData] = React.useState<GameData>({
