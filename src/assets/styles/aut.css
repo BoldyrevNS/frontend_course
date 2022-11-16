@@ -1,0 +1,68 @@
+body {
+    background: url(../images/sort-bg.png) no-repeat;
+}
+
+.form_auth_block {
+    width: 30%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+.form_auth_block_content {
+    margin-top: 15%;
+    border-radius: 30px;
+    padding-bottom: 7%;
+    background: #ababab;
+    opacity: 0.7;
+}
+
+.form_auth_block_head_text {
+    background-color: #2c0404;
+    border-radius: 25px 25px 0px 0px;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.form_auth_block label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #ababab;
+    opacity: 1;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.form_auth_block input {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    opacity: 1;
+}
+
+.home {
+    padding-bottom: 50px;
+}
+
+.aut_button {
+    opacity: 1;
+    background-color: #000000;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    cursor: pointer;
+    width: calc(40% - 4px);
+    border-radius: 10px;
+    padding: 9px 0;
+    font-family: Monospace;
+    letter-spacing: 1px;
+}
