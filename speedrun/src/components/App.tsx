@@ -16,7 +16,10 @@ import News from '../pages/News';
 
 
 const App = () => {
-  const [isAuth, setAuth] = React.useState<boolean>(false);
+  
+  const [isAuth, setAuth] = React.useState<boolean>(
+    localStorage.length > 0? true: false
+    );
 
   return (
     <AuthContext.Provider value={{isAuth, setAuth}}>

@@ -4,16 +4,17 @@ import Axios, {AxiosError, AxiosResponse} from 'axios';
 import { AuthContext } from "../components/AuthContext";
 
 
-const loginPath = baseURL + '/dj-rest-auth/login/'
+const loginPath = baseURL + '/auth/token/'
 
 export async function postLogin(data:LoginValues, context: AuthContext|null ){
+
     Axios.post(
         loginPath, 
         data
     ).then
     ( (result:AxiosResponse) => {
-        localStorage.setItem('key', result.data.key)
-        localStorage.setItem('username', data.username)
+        localStorage.setItem('refresh', result.data.refresh)
+        localStorage.setItem('access', result.data.access)
         context?.setAuth(true)
     })
     .catch((error: AxiosError) => {

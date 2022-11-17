@@ -3,6 +3,9 @@ from rest_framework.views import APIView
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from main.models import Game, Run, News
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from main.serializers import (GameSerializer, RunSerializer, 
                                 RunFullSerializer, NewsSerializer)
 
@@ -13,6 +16,7 @@ class GameViewSet(viewsets.ModelViewSet):
 
 
 class RunViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticatedOrReadOnly]
     def get_queryset(self):
         game_id = self.request.query_params.get('game_id', None)
         if game_id:
@@ -36,3 +40,14 @@ class NewsViewSet(viewsets.ModelViewSet):
         return NewsSerializer
 
     
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+
+        token['name'] = user.username
+
+        return token
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer

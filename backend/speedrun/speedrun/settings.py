@@ -7,6 +7,8 @@ SECRET_KEY = 'django-insecure-)h+^#ki*e^p@p*30ypw17%ncof$ga&ccmhep&%t6ei5nq+=f^f
 
 DEBUG = True
 
+REST_USE_JWT = True
+
 ALLOWED_HOSTS = ['localhost',]
 
 INSTALLED_APPS = [
@@ -64,7 +66,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'ACCESS_TOKEN_LIFETIME': timedelta(seconds=15),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': True,

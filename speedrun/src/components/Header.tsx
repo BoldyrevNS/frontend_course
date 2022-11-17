@@ -3,7 +3,6 @@ import "../css/Header.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/js/dist/collapse'
 import { Link } from "react-router-dom";
-import { Logout } from '../apis/logoutApi';
 import authContext from './AuthContext';
 
 const Header = () => {
@@ -45,7 +44,7 @@ const Header = () => {
                                 <li className="navbar-item">
                                     <Link className="nav-link" to='/login' onClick={
                                         ()=>{
-                                            Logout()
+                                            localStorage.clear()
                                             isLogin.setAuth(false)
                                         }
                                         }>Log out</Link>

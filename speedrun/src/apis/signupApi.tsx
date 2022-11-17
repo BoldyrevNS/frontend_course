@@ -16,8 +16,8 @@ export async function postSignup(data:SignupValues, context: AuthContext|null ){
         data
     ).then
     ( (result:AxiosResponse) => {
-        localStorage.setItem('key', result.data.key)
-        localStorage.setItem('username', data.username)
+        localStorage.setItem('access', result.data.access_token)
+        localStorage.setItem('refresh', result.data.refresh_token)
         context?.setAuth(true)
     })
     .catch((error: AxiosError) => {
