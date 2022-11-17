@@ -1,0 +1,83 @@
+/* Utility Classes */
+.l-heading{
+    font-size: 3rem; 
+  }
+  
+  .lead {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  
+  /* Section: Navbar */
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1.5rem;
+  }
+  
+  #navbar .logo {
+    margin-bottom: 1rem;
+  }
+  
+  /* About */
+  #about .about-content {
+    display: block;
+    text-align: center;
+  }
+  
+  #about .about-content img {
+    width: 100%;
+    margin: 1rem 0 0 0;
+  }
+  
+  /* Programs */
+  #programs .boxes {
+    display: block;
+  }
+  
+  /* Expert Trainers */
+  #trainers .trainer-boxes {
+    display: block;
+  }
+  
+  /* Contact */
+  #contact {
+    flex-direction: column;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 500px) {
+  
+    #navbar {
+      position: static;
+    }
+    #navbar ul {
+      display: block;
+      text-align: center;
+    }
+    
+    #navbar ul li {
+      padding: 1rem;
+    }
+  
+    #contact .contact-us .form-group {
+      display: block;
+    }
+  
+  }
+  
+  
+  @media screen and (min-height: 653px) {
+    
+    .l-heading {
+      font-size: 2rem;
+    }
+  
+    .m-heading {
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+    #cta .cta-content {
+      min-height: 400px;
+     }
+  }
