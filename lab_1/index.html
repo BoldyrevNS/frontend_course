@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="css/app.css">
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="style.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <header>
             <div class="container">
-                <!-- комментарий -->
                 <div class="logo">
                     <img src="templates/logo.jpg">
                 </div>
@@ -24,6 +24,18 @@
                     </ul>
                 </nav>
             </div>
+            <div class="container">
+
+                <nav>
+                    <ul>
+                        <li>Корзина</li>
+                        <li id="counter-label">
+                            0
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
         </header>
 
         <main class="container">
@@ -49,7 +61,7 @@
                         <div class="triangle"></div>
                         <div class="discount-percent">50%</div>
                         <br>
-                        <button class="btn btn-cart">В корзину</button>
+                        <button class="btn btn-cart" onclick="incrementClick()">В корзину</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5">
@@ -69,7 +81,7 @@
                         <div class="triangle"></div>
                         <div class="discount-percent">50%</div>
                         <br>
-                        <button class="btn btn-cart">В корзину</button>
+                        <button class="btn btn-cart" onclick="incrementClick()">В корзину</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5">
@@ -89,7 +101,7 @@
                         <div class="triangle"></div>
                         <div class="discount-percent">50%</div>
                         <br>
-                        <button class="btn btn-cart">В корзину</button>
+                        <button class="btn btn-cart" onclick="incrementClick()">В корзину</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5">
@@ -109,7 +121,7 @@
                         <div class="triangle"></div>
                         <div class="discount-percent">50%</div>
                         <br>
-                        <button class="btn btn-cart">В корзину</button>
+                        <button class="btn btn-cart" onclick="incrementClick()">В корзину</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5">
@@ -129,7 +141,7 @@
                         <div class="triangle"></div>
                         <div class="discount-percent">50%</div>
                         <br>
-                        <button class="btn btn-cart">В корзину</button>
+                        <button class="btn btn-cart" onclick="incrementClick()">В корзину</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5">
@@ -149,7 +161,7 @@
                         <div class="triangle"></div>
                         <div class="discount-percent">50%</div>
                         <br>
-                        <button class="btn btn-cart">В корзину</button>
+                        <button class="btn btn-cart" onclick="incrementClick()">В корзину</button>
                     </div>
                 </div>
             </section>
