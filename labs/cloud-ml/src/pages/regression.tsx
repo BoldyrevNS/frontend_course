@@ -11,6 +11,7 @@ import StringOutput from '../components/stringOutput';
 import StringInput from '../components/stringInput';
 import { postRegression } from '../apis/taskApi';
 import NumberInput from '../components/numberInput';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 interface RegressionData {
     image_name: string,
@@ -19,6 +20,7 @@ interface RegressionData {
 }
 
 function Regression() {
+    const navigate: NavigateFunction = useNavigate();
     const [regerssionData, setRegressionData] = React.useState<RegressionData>({ image_name: "", name_x: null, name_y: null });
     const [selectedFile, setSelectedFile] = React.useState<null | any>(null);
     const [image, setImage] = React.useState<null | any>(null);
@@ -30,11 +32,15 @@ function Regression() {
             return;
         }
         const get_image = async () => {
-            const image = await getImage(regerssionData!.image_name, sessionStorage.getItem('user'));
+            const image = await getImage(regerssionData!.image_name);
+            if(image === null){
+                navigate('/login');
+            }
             setImage(image)
         }
         get_image()
     },
+    // eslint-disable-next-line
         [regerssionData]
     );
     const handleSubmit = async (event: any) => {
@@ -51,9 +57,16 @@ function Regression() {
 
         const formData = new FormData();
         formData.append(`${selectedFile.name}`, selectedFile);
-        const result: RegressionData | null = await postRegression(formData, sessionStorage.getItem('user'), polynomialOrder, columnNameX, columnNameY);
+        const result: RegressionData | null | true = await postRegression(formData, polynomialOrder, columnNameX, columnNameY);
+        if(result === true){
 
-        if (result !== null) {
+            handleSubmit(event);
+
+        }else if(result === null){
+
+            navigate('/login');
+
+        }else if(result !== undefined){
             setRegressionData((oldData: Object) => ({ ...oldData, ...result }))
         }
         

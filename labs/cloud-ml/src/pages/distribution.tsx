@@ -10,6 +10,7 @@ import InputData from '../models/inputData';
 import StringInput from '../components/stringInput';
 import OutputData from '../models/outputData';
 import StringOutput from '../components/stringOutput';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 interface DistributionData {
     image_name: string,
@@ -18,6 +19,7 @@ interface DistributionData {
 }
 
 function Distribution() {
+    const navigate: NavigateFunction = useNavigate();
     const [distributionData, setDistributionData] = React.useState<DistributionData>({ image_name: "", name: null, distribution_type: null });
     const [selectedFile, setSelectedFile] = React.useState<null | any>(null);
     const [image, setImage] = React.useState<null | any>(null);
@@ -27,11 +29,15 @@ function Distribution() {
             return;
         }
         const get_image = async () => {
-            const image = await getImage(distributionData!.image_name, sessionStorage.getItem('user'));
+            const image = await getImage(distributionData!.image_name);
+            if(image === null){
+                navigate('/login');
+            }
             setImage(image)
         }
         get_image()
     },
+    // eslint-disable-next-line
         [distributionData]
     );
     const handleSubmit = async (event: any) => {
@@ -43,9 +49,16 @@ function Distribution() {
 
         const formData = new FormData();
         formData.append(`${selectedFile.name}`, selectedFile);
-        const result: DistributionData | null = await postDistribution(formData, sessionStorage.getItem('user'), columnName);
+        const result: DistributionData | null | true = await postDistribution(formData, columnName);
+        if(result === true){
 
-        if (result !== null) {
+            handleSubmit(event);
+
+        }else if(result === null){
+
+            navigate('/login');
+
+        }else if(result !== undefined){
             setDistributionData((oldData: Object) => ({ ...oldData, ...result }))
         }
     }

@@ -1,7 +1,6 @@
 import React from 'react';
 import './css/App.css';
 import { Routes, Route } from "react-router-dom";
-import AuthContext from './authContext'
 import Home from "./pages/home";
 import Login from './pages/login';
 import Profile from './pages/profile';
@@ -16,11 +15,9 @@ import Registration from './pages/registration';
 
 
 function App() {
-  const [authenticated, setAuthenticated] = React.useState<boolean>(false);
 
   return (
-      <AuthContext.Provider value={{ authenticated, setAuthenticated }}>
-        
+      <>
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/profile" element={ <Profile /> } />
@@ -33,7 +30,7 @@ function App() {
           <Route path="/correlation" element={ <Correlation /> }/>
         </Routes>
         <Footer />
-      </AuthContext.Provider>
+      </>
     )
 }
 

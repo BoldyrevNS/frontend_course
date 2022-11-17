@@ -3,7 +3,6 @@ import '../css/button_default.css';
 import '../css/registration.css';
 import HeaderCentral from "../components/headerCentral";
 import { useNavigate, NavigateFunction } from "react-router-dom";
-import authContext from "../authContext";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { postAuth } from "../apis/authApi";
 import { User } from "../models/user";
@@ -14,18 +13,15 @@ function Registration() {
     const [password, setPassword] = React.useState<string>('');
     const [passwordCopy, setPasswordCopy] = React.useState<string>('');
     const [isPressed, setPressed] =  React.useState<boolean>(false);
-    const [user, setUser] = React.useState<User>({ token: '' });
+    const [user, setUser] = React.useState<User>({ token: '', refresh_token:'' });
     const [error, setError] = React.useState<string | null>(null);
-    const auth_context = React.useContext(authContext);
-
     React.useEffect(() => {
         if(user.token === ''){
             return;
         }
-        console.log(user);
-        sessionStorage.setItem('user', user.token);
+        localStorage.setItem('token', user.token);
+        localStorage.setItem('refresh_token', user.refresh_token);
         navigate('/profile')
-        auth_context!.setAuthenticated(true);
 
     },
     // eslint-disable-next-line

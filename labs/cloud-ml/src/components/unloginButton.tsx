@@ -2,16 +2,14 @@ import React from "react";
 import '../css/button_default.css';
 import '../css/unlogin.css';
 import { useNavigate, NavigateFunction } from "react-router-dom";
-import authContext from "../authContext";
 
 function UnLoginButton() {
     const navigate:NavigateFunction = useNavigate();
-    const auth_context = React.useContext(authContext);
 
     function HandleMouseEvent(){
         navigate('/login');
-        auth_context!.setAuthenticated(false);
-        localStorage.setItem('user', '')
+        localStorage.setItem('token', '');
+        localStorage.setItem('refresh_token', '');
     };
 
     return (

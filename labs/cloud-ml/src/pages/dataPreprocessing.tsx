@@ -5,9 +5,11 @@ import '../css/button_default.css';
 import MethodPanel from '../components/methodPanel';
 import Header from "../components/header";
 import { postPreprocessing } from '../apis/taskApi';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 
 function DataPreprocessing() {
+    const navigate: NavigateFunction = useNavigate();
     const [selectedFile, setSelectedFile] = React.useState<null | any>(null);
     const [filename, setFilename] = React.useState<string>('');
     const [csvUrl, setCsvUrl] = React.useState<string>('');
@@ -21,9 +23,16 @@ function DataPreprocessing() {
         const formData = new FormData();
         formData.append(`${selectedFile.name}`, selectedFile);
 
-        const result: Blob | null = await postPreprocessing(formData, sessionStorage.getItem('user'));
-        
-        if(result !== null){
+        const result: Blob | null | true = await postPreprocessing(formData);
+        if(result === true){
+
+            handleSubmit(event);
+
+        }else if(result === null){
+
+            navigate('/login');
+
+        }else if(result !== undefined){
             let data: Blob = new Blob([result], {
                 type: 'text/csv'
             });

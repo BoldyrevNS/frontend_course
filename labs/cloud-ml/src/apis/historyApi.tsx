@@ -1,12 +1,14 @@
 import Axios, { AxiosError } from "axios";
+import { getRefresh } from "./authApi";
 
 const historyPath: string = 'http://localhost:8080/history';
 
 
-export async function getHistory(user: string | null) {
+export async function getHistory() {
+    const token = localStorage.getItem('token')
     return Axios.get(historyPath,
         {
-            params: {user:user},
+            headers: { 'Authorization': ''+token},
             responseType: "json"
         }
     ).then
@@ -14,6 +16,9 @@ export async function getHistory(user: string | null) {
             return response.data;
         })
         .catch((error: AxiosError) => {
+            if(error.response!.status === 401){
+                return getRefresh();
+            }
             alert(`${error.response!.status} ${error.response!.data}.`);
             return null;
         });

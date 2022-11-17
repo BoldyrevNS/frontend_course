@@ -11,6 +11,7 @@ import StringOutput from '../components/stringOutput';
 import OutputData from '../models/outputData';
 import { getImage } from '../apis/fileApi';
 import { postClusterization } from '../apis/taskApi';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 interface ClusterizationData{
     image_name: string,
@@ -20,6 +21,7 @@ interface ClusterizationData{
 }
 
 function Clusterization() {
+    const navigate: NavigateFunction = useNavigate();
     const [selectedFile, setSelectedFile] = React.useState<null | any>(null);
     const [withCenters, setWithCenters] = React.useState<boolean>(false);
     const [image, setImage] = React.useState<null | any>(null);
@@ -37,11 +39,15 @@ function Clusterization() {
         }
 
         const get_image = async () => {
-            const image = await getImage(clusterizationData!.image_name, sessionStorage.getItem('user'));
+            const image = await getImage(clusterizationData!.image_name);
+            if(image === null){
+                navigate('/login');
+            }
             setImage(image)
         }
         get_image()
     },
+    // eslint-disable-next-line
         [clusterizationData]
     );
 
@@ -58,9 +64,16 @@ function Clusterization() {
 
         const formData = new FormData();
         formData.append(`${selectedFile.name}`, selectedFile);
-        const result: ClusterizationData | null = await postClusterization(formData, sessionStorage.getItem('user'), clustersNumber, withCenters);
-        
-        if(result !== null){
+        const result: ClusterizationData | null | true = await postClusterization(formData, clustersNumber, withCenters);
+        if(result === true){
+
+            handleSubmit(event);
+
+        }else if(result === null){
+
+            navigate('/login');
+
+        }else if(result !== undefined){
             setClusterizationData((oldData: Object) => ({ ...oldData, ...result }))
         }
 

@@ -1,4 +1,5 @@
 import Axios, { AxiosError } from "axios";
+import { getRefresh } from "./authApi";
 
 const correlationPath: string = 'http://localhost:8080/correlation';
 const clusterizationPath: string = 'http://localhost:8080/clusterization';
@@ -6,12 +7,16 @@ const distributionPath: string = 'http://localhost:8080/distribution';
 const regressionPath: string = 'http://localhost:8080/regression';
 const preprocessingPath: string = 'http://localhost:8080/preprocessing';
 
-function postToTask(path: string, formData: FormData, user: string | null, parameters: Object) {
+function postToTask(path: string, formData: FormData, parameters: Object) {
+    const token = localStorage.getItem('token')
     return Axios.post(path,
         formData,
         {
-            params: { ...{ user: user }, ...parameters },
-            headers: { "Content-Type": "multipart/form-data" },
+            params: { ...parameters },
+            headers: { 
+                "Content-Type": "multipart/form-data",
+                'Authorization': ''+token
+            },
             responseType: "json"
         }
     ).then
@@ -19,32 +24,35 @@ function postToTask(path: string, formData: FormData, user: string | null, param
             return response.data;
         })
         .catch((error: AxiosError) => {
+            if(error.response!.status === 401){
+                return getRefresh();
+            }
             alert(`${error.response!.status} ${error.response!.data}.`);
-            return null;
+            return undefined;
         });
 }
 
-export function postCorrelation(formData: FormData, user: string | null, colormap: string | null) {
-    return postToTask(correlationPath, formData, user, { colormap: colormap })
+export function postCorrelation(formData: FormData, colormap: string | null) {
+    return postToTask(correlationPath, formData, { colormap: colormap })
 }
 
 
-export function postClusterization( formData: FormData, user: string | null, clustersNumber: number, withCenters: boolean) {
-    return postToTask(clusterizationPath, formData, user,
+export function postClusterization( formData: FormData, clustersNumber: number, withCenters: boolean) {
+    return postToTask(clusterizationPath, formData,
         {
             clusters_num: clustersNumber,
             clusters_centers: withCenters
         })
 }
 
-export function postDistribution(formData: FormData, user: string | null, columnName: string | null) {
-    return postToTask(distributionPath, formData, user, { column_name: columnName })
+export function postDistribution(formData: FormData, columnName: string | null) {
+    return postToTask(distributionPath, formData, { column_name: columnName })
 }
 
 
-export function postRegression(formData: FormData, user: string | null, 
+export function postRegression(formData: FormData,  
                         polynomialOrder: number, columnNameX: string | null, columnNameY: string | null) {
-    return postToTask(regressionPath,  formData, user,
+    return postToTask(regressionPath,  formData,
         {
             order: polynomialOrder,
             column_x: columnNameX,
@@ -53,12 +61,15 @@ export function postRegression(formData: FormData, user: string | null,
 }
 
 
-export function postPreprocessing(formData: FormData, user: string | null) {
+export function postPreprocessing(formData: FormData) {
+    const token = localStorage.getItem('token')
     return Axios.post(preprocessingPath,
         formData,
         {
-            params: { user: user },
-            headers: { "Content-Type": "multipart/form-data" },
+            headers: { 
+                "Content-Type": "multipart/form-data",
+                'Authorization': ''+token
+            },
             responseType: "blob"
         }
     ).then
@@ -66,7 +77,10 @@ export function postPreprocessing(formData: FormData, user: string | null) {
             return response.data;
         })
         .catch((error: AxiosError) => {
+            if(error.response!.status === 401){
+                return getRefresh();
+            }
             alert(`${error.response!.status} ${error.response!.data}.`);
-            return null;
+            return undefined;
         });
 }

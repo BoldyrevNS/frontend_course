@@ -2,7 +2,7 @@ import logging
 import json
 from aiohttp import web
 from database_api import select_operations_by_user
-from auth import check_user, anonymous_user
+from auth import get_user_from_auth, anonymous_user
 
 def operation_to_dict(operation:tuple, number: int):
     result: dict = {}
@@ -15,8 +15,11 @@ def operation_to_dict(operation:tuple, number: int):
     return result
 
 async def get_history_handler(request: web.Request) -> web.Response:
-    user = check_user(request.rel_url.query.get('user', anonymous_user))
-    if user == anonymous_user:
+    try:
+        user = get_user_from_auth(request)
+    except Exception as e:
+        return web.Response(status=401)
+    if user == anonymous_user or user is None:
         return web.Response(status=401)
 
     results = select_operations_by_user(user)

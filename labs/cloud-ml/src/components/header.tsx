@@ -4,12 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../images/brain.png';
 import { main_page_link, site_name} from '../globals';
 import { Link } from "react-router-dom";
-import authContext from "../authContext";
 
 function Header (){
-    const isLogin = React.useContext(authContext);
     let link: string = '/login';
-    if (isLogin!.authenticated || sessionStorage.getItem('user')!=null) {
+    if (localStorage.getItem('token') !== '' && localStorage.getItem('token') !== null) {
         link = '/profile';
     }
     return (

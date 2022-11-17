@@ -9,6 +9,7 @@ import StringInput from '../components/stringInput';
 import InputData from '../models/inputData';
 import { getImage } from '../apis/fileApi';
 import { postCorrelation } from '../apis/taskApi';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 interface CorrelationData {
     image_name: string,
@@ -17,6 +18,7 @@ interface CorrelationData {
 }
 
 function Correlation() {
+    const navigate: NavigateFunction = useNavigate();
     const [correlationData, setCorrelationData] = React.useState<CorrelationData>({ image_name: "", names: [], values: [] });
     const [selectedFile, setSelectedFile] = React.useState<null | any>(null);
     const [image, setImage] = React.useState<null | any>(null);
@@ -26,11 +28,15 @@ function Correlation() {
                 return;
         }
         const get_image = async () => {
-            const image = await getImage(correlationData!.image_name, sessionStorage.getItem('user'));
+            const image = await getImage(correlationData!.image_name);
+            if(image === null){
+                navigate('/login');
+            }
             setImage(image)
         }
         get_image()
     },
+    // eslint-disable-next-line
         [correlationData]
     );
 
@@ -44,9 +50,16 @@ function Correlation() {
         const formData = new FormData();
         formData.append(`${selectedFile.name}`, selectedFile);
 
-        const result: CorrelationData | null = await postCorrelation(formData, sessionStorage.getItem('user'), colorMap);
-        
-        if(result !== null){
+        const result: CorrelationData | null | true = await postCorrelation(formData, colorMap);
+        if(result === true){
+
+            handleSubmit(event);
+
+        }else if(result === null){
+
+            navigate('/login');
+
+        }else if(result !== undefined){
             setCorrelationData((oldData: Object) => ({ ...oldData, ...result }))
         }
 
