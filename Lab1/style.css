@@ -1,0 +1,279 @@
+
+/* Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Colors Used: #08D9D6  -  #252A34  -  #FF2E63  -  #EAEAEA */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Style */
+html, body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6rem;
+  color: #252A34;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.primary-text {
+  color: #FF2E63;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-dark {
+  background-color: #252A34;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: #EAEAEA;
+}
+
+.bg-primary {
+  background-color: #08D9D6;
+  color: #fff;
+}
+
+.btn {
+  background-color: #08D9D6;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #FF2E63;
+}
+
+.btn-dark {
+  background-color: #252A34;
+}
+
+.py-1 { 
+  padding: 1.5rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.p-1 {
+  padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.l-heading {
+  font-size: 3rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.m-heading {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.lead {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.box-shadow {
+  box-shadow: 0 0 2px #252A34;
+}
+/* Section: Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#navbar .logo img {
+  width: 80px;
+  display: block;
+
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+#navbar ul li a {
+  padding: 1rem;
+  color: #fff;
+}
+
+#navbar ul li a:hover {
+  background-color: #08D9D6;
+  border-radius: 5px;
+}
+
+/* Showcase */
+#showcase {
+  background: #252A34 url(../img/showcase.jpg) no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+}
+
+.showcase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1.5rem;
+
+  /* overlay */
+  background-color: rgba(0,0,0, 0.9);
+}
+
+/* Section: About */
+#about .about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+#about .about-content div, 
+#about .about-content img {
+  flex: 1;
+}
+
+#about .about-content img {
+  display: block;
+  width: 50%;
+  border: 5px solid #fff;
+  margin-left: 1rem;
+}
+
+/* cta */
+#cta {
+  background: #252A34 url(../img/cta.jpg) no-repeat center center/cover;
+  color: #fff;
+}
+
+#cta .cta-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.6);
+ }
+
+ /* Our Programs */
+#programs .boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+#programs .boxes .box {
+  flex: 1;
+}
+
+#programs .boxes .box img {
+  width: 70px;
+  background-color: #08D9D6;
+  padding: 0.5rem;
+  border-radius: 100%;
+  color: #252A34;
+}
+
+/* Trainers */
+#trainers .trainer-boxes {
+  display: flex;
+}
+
+#trainers .trainer-boxes .trainer-box {
+  flex: 1;
+  background-color: #fff;
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+#trainers .trainer-boxes .trainer-box img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#trainers .trainer-boxes .trainer-box ul {
+  display: flex;
+  list-style: none;
+}
+
+#trainers .trainer-boxes .trainer-box ul li {
+  margin-right: 0.75rem;
+}
+
+#trainers .trainer-boxes .trainer-box ul li i {
+  color: #252A34;
+}
+
+#trainers .trainer-boxes .trainer-box ul li i:hover {
+  color: #FF2E63;
+}
+
+
+/* Contact  */
+#contact {
+  display: flex;
+}
+
+#contact .contact-us, 
+#contact .map {
+  flex: 1;
+}
+
+#contact .contact-us input, 
+#contact .contact-us textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+#contact .contact-us .form-group {
+  display: flex;
+}
+
+#contact .contact-us .form-group input[type="text"] {
+  margin-right: 0.75rem;
+}
