@@ -13,13 +13,15 @@ import AuthContext from './AuthContext';
 import Signup from '../pages/Signup';
 import ListOfNews from '../pages/ListOfNews';
 import News from '../pages/News';
+import { checkToken } from '../apis/checkTokenApi';
 
 
 const App = () => {
   
-  const [isAuth, setAuth] = React.useState<boolean>(
-    localStorage.getItem('refresh') === null? false: true
-    );
+  const [isAuth, setAuth] = React.useState<boolean>(false);
+  React.useEffect(()=>{
+    checkToken(setAuth)
+  }, [])
 
   return (
     <AuthContext.Provider value={{isAuth, setAuth}}>
