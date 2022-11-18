@@ -18,7 +18,7 @@ import News from '../pages/News';
 const App = () => {
   
   const [isAuth, setAuth] = React.useState<boolean>(
-    localStorage.length > 0? true: false
+    localStorage.getItem('refresh') === null? false: true
     );
 
   return (

@@ -1,8 +1,10 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import Axios, {AxiosError, AxiosResponse} from 'axios';
+import { AuthContext } from '../components/AuthContext';
 import { MyFormValues } from '../components/CreateRun';
 import { baseURL } from '../constants';
 import RunShort from '../models/RunShort';
+import { NavigateFunction } from 'react-router-dom';
 
 
 const runPath = baseURL + '/speedrun/runs/'
@@ -29,7 +31,8 @@ function parseJwt (token: any) {
     return JSON.parse(jsonPayload);
 }
 
-export async function postRun(resultHandler:(run: RunShort)=>void, data:MyFormValues, game_id:number){
+export async function postRun(resultHandler:(run: RunShort)=>void, data:MyFormValues, game_id:number, 
+                                            auth_context:AuthContext | null, navigate:NavigateFunction){
     const now = new Date();
     const run = {
         data: now.toISOString().slice(0,10),
@@ -49,21 +52,23 @@ export async function postRun(resultHandler:(run: RunShort)=>void, data:MyFormVa
     api.interceptors.response.use((config) =>{
         return config;
     }, async (error) =>{
-        if(error.response.status == 401 && error.config && !error.config._isRetry){
+        if(error.response.status === 401 && error.config && !error.config._isRetry){
             try {
                 const response = await axios.post(
                     `${baseURL}/auth/token/refresh/`,
                     {refresh:localStorage.getItem('refresh')}
                 )
-                localStorage.setItem('access', response.data.access)
+                localStorage.setItem('access', response?.data.access)
                 error.config.headers = {
                     'Content-Type': 'application/json',
                 }
-                error.config.data = JSON.parse(error.config.data)
+                error.config.data = JSON.parse(error.config.data);
                 return api.request(error.config);
-                
             }catch (e){
                 console.log(e);
+                auth_context?.setAuth(false);
+                localStorage.clear();
+                navigate('/login')
             }
         }
     })
@@ -81,6 +86,6 @@ export async function postRun(resultHandler:(run: RunShort)=>void, data:MyFormVa
         resultHandler(data);
     })
     .catch((error: AxiosError) => {
-        alert(error.message);
+        console.log(error.message);
     });
 }

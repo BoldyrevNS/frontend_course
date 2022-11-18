@@ -5,6 +5,8 @@ import "../css/CreateRun.css";
 import RunShort from '../models/RunShort';
 import { postRun } from '../apis/runApi';
 import runValidate from '../validations/runValidate';
+import { useNavigate } from 'react-router-dom';
+import authContext from './AuthContext';
 
 interface CreateRunProps{
     game_id: number,
@@ -26,9 +28,11 @@ const initialValues: MyFormValues = {
     seconds: 0, 
 }
 const CreateRun = (props:CreateRunProps) =>{
+    const navigate = useNavigate();
+    const auth_context = React.useContext(authContext);
     
     const onSubmit = (values:MyFormValues)=>{
-        postRun(props.onAdd, values, props.game_id);
+        postRun(props.onAdd, values, props.game_id, auth_context, navigate);
         props.closeModal()
     }
 
