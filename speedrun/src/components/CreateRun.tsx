@@ -2,7 +2,7 @@ import { Field, Form, Formik } from 'formik';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/CreateRun.css";
-import RunShort from '../models/RunShort';
+import RunData from '../models/RunData';
 import { postRun } from '../apis/runApi';
 import runValidate from '../validations/runValidate';
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +10,7 @@ import authContext from './AuthContext';
 
 interface CreateRunProps{
     game_id: number,
-    onAdd: (data: RunShort) => void
+    onAdd: (data: RunData) => void
     closeModal: () => void
 }
 
@@ -18,7 +18,7 @@ export interface MyFormValues {
     link: string,
     hour: number,
     minutes: number,
-    seconds: number,
+    seconds: number, 
 }
 
 const initialValues: MyFormValues = { 

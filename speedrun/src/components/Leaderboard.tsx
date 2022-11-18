@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/Leaderboard.css";
-import RunShort from '../models/RunShort';
+import RunData from '../models/RunData';
 import { getRunsShort } from '../apis/runApi';
 import Modal from './Modal';
 import CreateRun from './CreateRun';
@@ -20,13 +20,13 @@ interface LeaderboardProps{
 }
 
 const Leaderboard = (props: LeaderboardProps) =>{
-    const [runs, setRuns] = React.useState<RunShort[]>([])
+    const [runs, setRuns] = React.useState<RunData[]>([])
     const [rule, setRule] = React.useState<boolean>(false)
     const [form, setForm] = React.useState<boolean>(false)
     const [mustUpdate, setMustUpdate] = React.useState<boolean>(false)
     const auth_context = React.useContext(authContext);
 
-    const addRun = (run: RunShort) =>{
+    const addRun = (run: RunData) =>{
         setMustUpdate(!mustUpdate)
     }
 

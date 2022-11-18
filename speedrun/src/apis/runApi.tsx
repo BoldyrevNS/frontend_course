@@ -3,7 +3,7 @@ import Axios, {AxiosError, AxiosResponse} from 'axios';
 import { AuthContext } from '../components/AuthContext';
 import { MyFormValues } from '../components/CreateRun';
 import { baseURL } from '../constants';
-import RunShort from '../models/RunShort';
+import RunData from '../models/RunData';
 import { NavigateFunction } from 'react-router-dom';
 
 
@@ -14,7 +14,7 @@ export async function getRunsShort(resultHandler: (data: any)=>void, id:number=1
         { params:{game_id:id}, responseType: "json" }
     ).then
     (result => {
-        const data: RunShort[] = (result as AxiosResponse<RunShort[]>).data;
+        const data: RunData[] = (result as AxiosResponse<RunData[]>).data;
         resultHandler(data);
     })
     .catch((error: AxiosError) => {
@@ -31,7 +31,7 @@ function parseJwt (token: any) {
     return JSON.parse(jsonPayload);
 }
 
-export async function postRun(resultHandler:(run: RunShort)=>void, data:MyFormValues, game_id:number, 
+export async function postRun(resultHandler:(run: RunData)=>void, data:MyFormValues, game_id:number, 
                                             auth_context:AuthContext | null, navigate:NavigateFunction){
     const now = new Date();
     const run = {
@@ -72,7 +72,7 @@ export async function postRun(resultHandler:(run: RunShort)=>void, data:MyFormVa
             }
         }
     })
-    api.post<RunShort>(
+    api.post<RunData>(
         '/speedrun/runs/', 
         run, 
         {
@@ -82,7 +82,7 @@ export async function postRun(resultHandler:(run: RunShort)=>void, data:MyFormVa
         }  
     ).then
     (result => {
-        const data: RunShort = (result as AxiosResponse<RunShort>).data;
+        const data: RunData = (result as AxiosResponse<RunData>).data;
         resultHandler(data);
     })
     .catch((error: AxiosError) => {
