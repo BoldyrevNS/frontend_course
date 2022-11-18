@@ -1,0 +1,41 @@
+/* import file from google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root{
+    --primary-fonts: 'Poppins', sans-serif;
+    background: rgb(0, 0, 0);
+}
+/* common class  */
+.font-poppins{
+    font-family: var(--primary-fonts);
+    background: rgb(0, 0, 0);
+}
+.cursor-pointer{
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+}
+.z-index{
+    z-index: 10;
+    background: rgb(0, 0, 0);
+}
+.hero{
+    height: 60vh;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+}
+.object-cover{
+    object-fit: cover;
+    background: rgb(0, 0, 0);
+}
+.overlaytext{
+    background: rgb(226, 43, 11);
+    background: linear-gradient(90deg, rgba(36, 8, 0, 0.513) 0%, rgba(121, 22, 9, 0.486) 35%, rgba(255, 166, 0, 0.541) 100%);
+}
+
+.nav-link{
+    color: blue!important;
+}
+
+.logo{
+    color: blue!important;
+}
