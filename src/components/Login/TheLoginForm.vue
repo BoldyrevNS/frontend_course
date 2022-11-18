@@ -42,7 +42,7 @@ export default {
       }
       if (this.email.trim().length === 0) {
         this.errors.email = 'введите email.'
-      } else if (reg.test(this.email.trim()) == false) {
+      } else if (reg.test(this.email.trim()) === false) {
         this.errors.email = 'Введите корректный e-mail';
       }
       if (this.password.trim().length === 0) {
