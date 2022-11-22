@@ -1,0 +1,47 @@
+.card {
+    background-color: #1c1c1e;
+    width: fit-content;
+    height: fit-content;
+    padding: 0px;
+    margin: 10px auto;
+    position: inherit;
+}
+
+.card-img-overlay {
+    font-size: 14px;
+    width: 140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    padding: 0px;
+    position: relative;
+}
+
+.card-title {
+    margin-bottom: 0px;
+}
+
+.card-text {
+    margin-bottom: 1px;
+}
+
+.card_text_back {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%; 
+    position: absolute;  
+}
+
+.content a {
+    text-decoration: none;
+    color: #fffefe;
+}
+
+.position_poster {
+    text-align: center;
+}
+
+.poster {
+    width: 140px;
+    height: 200px;    
+}
