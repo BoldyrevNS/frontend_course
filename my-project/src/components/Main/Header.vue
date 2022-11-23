@@ -18,7 +18,7 @@
                 Поиск
               </router-link>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
               <a class="nav-link" href="#">
                 <img src="../../img/upload_icon.png">
                 Загрузить
@@ -30,6 +30,7 @@
                 Настройки
               </a>
             </li>
+            -->
           </ul>
         </div>
       </div>
