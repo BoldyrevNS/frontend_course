@@ -1,0 +1,14 @@
+.login-form {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 25px auto;
+    margin-top: 100px;
+    background-color: #f2f2f2;
+    padding: 25px;
+  }
+  .login-form .errors {
+    color: red;
+  }
+  .login-form input {
+    border: 1px solid #ddd;
+  }
