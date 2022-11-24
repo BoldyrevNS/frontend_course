@@ -1,3 +1,6 @@
+Бочков Андрей ПВ-192
+Образовательный сайт с теоретическими курсами на различную тематику
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
