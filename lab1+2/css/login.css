@@ -11,3 +11,11 @@ button.btn.btn-primary {
     background-color: #666666;
     border-color: black;
 }
+
+.error {
+    border-color: red;
+}
+
+.check-error  + .form-check-label {
+    color: red;
+}
