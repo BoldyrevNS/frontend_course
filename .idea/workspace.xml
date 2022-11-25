@@ -1,128 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8001d63c-d18f-4efa-8366-bb60ea6d8b20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Card/Counter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Card/Price.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Card/Rating.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Card/Status.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Catalog/CatalogImgCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Catalog/CatalogProduct.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/HomePage/HomePresent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/HomePage/ImageBrand.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/HomePage/Product.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/HomePage/Title.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/LoginPage/Form.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/LoginPage/ImageBrand.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Main/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Main/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Menu/DropdownMenu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Menu/LeftMenu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Menu/TopMenu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Navbar/CatalogNavbar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Navbar/TopNavbar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/ProductPage/Description.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/ProductPage/Product.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/components/ProductPage/Title.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/resource/authorization/login.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/resource/tovar-card/tovar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/views/HomeView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/views/LoginView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/src/views/ProductView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/frontend/vue.config.js" afterDir="false" />
+    <list default="true" id="8001d63c-d18f-4efa-8366-bb60ea6d8b20" name="Changes" comment="lab2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/.idea/teaShop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/authorization.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-grid.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-reboot.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-utilities.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-utilities.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-utilities.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-utilities.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-utilities.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/css/bootstrap.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.esm.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.esm.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.esm.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/my-css/authorization.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/my-css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/my-css/product.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/product.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/authorization/login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/brand-icon/login.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/navbar-icon/cart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/content-middle/coffe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/card-icon/coffe.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/content-middle/present.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/card-icon/present.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/content-middle/tea-with-dopant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/card-icon/tea-with-dopant.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/content-middle/tea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/card-icon/tea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/content-middle/trava.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/card-icon/trava.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/content-middle/ulun.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/card-icon/ulun.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/content-tovar/tovar1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/product-icon/tovar1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/content-tovar/tovar2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/product-icon/tovar2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/content-tovar/tovar3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/product-icon/tovar3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/heart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/navbar-icon/heart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/lock.svg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/navbar-icon/lock.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/menu/coffe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/dropdown-menu-icon/coffe.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/menu/gift.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/dropdown-menu-icon/gift.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/menu/planttea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/dropdown-menu-icon/planttea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/menu/posuda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/dropdown-menu-icon/posuda.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/menu/sirop.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/dropdown-menu-icon/sirop.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/menu/sladosti.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/dropdown-menu-icon/sladosti.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/menu/tea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/dropdown-menu-icon/tea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/menu/trava.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/dropdown-menu-icon/trava.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/src/resource/search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/tea-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/brand-icon/tea-banner.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/tea_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/brand-icon/tea_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1/teaShop/resource/tovar-card/tovar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/public/images/product-icon-full/tovar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/frontend/src/components/Catalog/CatalogProduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/frontend/src/components/Catalog/CatalogProduct.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,8 +51,18 @@
       <workItem from="1665141818834" duration="15000" />
       <workItem from="1665164760145" duration="89000" />
       <workItem from="1667934183004" duration="1251000" />
-      <workItem from="1667937762610" duration="374000" />
+      <workItem from="1667937762610" duration="696000" />
+      <workItem from="1667993323881" duration="1286000" />
+      <workItem from="1667999432119" duration="471000" />
     </task>
+    <task id="LOCAL-00001" summary="lab2">
+      <created>1667938447614</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667938447614</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,5 +90,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lab2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab2" />
   </component>
 </project>
