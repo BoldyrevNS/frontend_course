@@ -1,0 +1,48 @@
+
+version: '3'
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: web-app
+    container_name: web-app
+    tty: true
+    volumes:
+      - ./:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - app-network
+
+  webserver:
+    image: nginx:alpine
+    container_name: web-webserver
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - app-network
+
+  db:
+    image: mysql:5.7
+    container_name: web-db
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 'superpass321!'
+      MYSQL_DATABASE: 'web'
+      MYSQL_USER: 'gendalin'
+      MYSQL_PASSWORD: 'vcnbntkb123'
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+  

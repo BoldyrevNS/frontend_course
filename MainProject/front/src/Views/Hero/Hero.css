@@ -1,0 +1,242 @@
+.Main {
+    width: 1000px; 
+    height: 1200px; 
+    margin-left: 300px;
+    top: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.MainInfo {
+    padding: 20px;
+    width: 1000px; 
+    max-height: 45%;
+    background: rgba(255,186,0);
+}
+
+.Main h2 {
+    color:rgba(255, 255, 0);
+    flex: none; 
+    order: 0;
+    align-self: stretch; flex-grow: 0; margin: 0px 10px;
+
+/* Акцент */
+/* Inside Auto Layout */
+
+}
+
+
+.MainList {
+    top: 20px;
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255,186,0);
+    width: 100%; 
+    }
+
+.TopPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.TopPage div{
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.TopPage.Name{
+     height: 60px;
+     width: 20%;
+     margin: 0px;   
+}
+
+.NameField{
+    height: 30px;
+    width: 95%; 
+    background-color: white;
+    align-items: flex-end;
+    border: 3px black solid;
+    font-size: 25px;
+    text-align:center;
+    margin: 0px;
+    line-height: 1;
+}
+
+#selectvalue{
+    font-size: 25px;
+    border: 3px black solid;
+}
+
+.RightLayout textarea{
+    height: 100%;
+    width: 100%;
+    resize: none;
+}
+
+.CenterLayout textarea{
+    height: 100%;
+    width: 100%;
+    resize: none;
+}
+
+
+.MainTable{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    height: 900px;
+}
+
+
+.ParametrTable{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background: rgba(64,58,58);
+
+}
+
+.BonusHero{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+}
+
+
+.BonusHero .Count{
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    border: 4px black solid;
+    font-size: 40px;
+    text-align: center;
+    line-height: 1;
+    
+}
+
+.BonusHero .Name{
+    margin-top: 2px;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    border: 1px black solid;
+    text-align: justify;
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+
+.Parametrs{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.Parametrs .Param{
+    height: 100px;
+    width: 100%;
+
+    background: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Parametrs .Param .NameP{
+    height: 20px;
+    font-size:19px;
+    margin: 0px;
+    padding:0px;
+    line-height: 1;
+}
+
+.Parametrs .Param textarea{
+    width: 100%;
+    height: 45px;
+    resize: none;
+    font-size:35px;
+    padding: 0px;
+    text-align: center;
+    line-height: 1;
+}
+
+.Parametrs .Param .Bonus p{
+    font-size:30px;
+    text-align: center;
+    margin: auto;
+}
+
+.Parametrs .Bonus {
+    /*background-color: black;*/
+    margin-top:0px ;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 200px;
+    background: white;
+    text-align: center;
+}
+
+
+.CenterLayout{
+    margin-left: 3px;
+    width: 50%;
+}
+
+.CenterLayout img{
+    width: 100%;
+    height: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid black;
+}
+
+.CenterLayout .heroDescripton{
+    height: 44%;
+    background: white;
+    border: 2px solid black;
+    margin: 0;
+
+}
+
+.RightLayout{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    height: 100%;
+    width: 25%;
+
+}
+
+.RightLayout .List p{
+    margin: 0px;
+    font-size: 25px;
+}
+
+.RightLayout .List div{
+    overflow: auto;
+    width: 100%;
+    height: 250px;
+    background: white;
+    border: 2px solid black;
+}
+
+.btn-green {
+    width: 100%;
+    background-color: #7cfc00;
+    color: #333;
+    transition: 2s;
+  }

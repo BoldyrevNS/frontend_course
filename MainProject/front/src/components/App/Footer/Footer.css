@@ -1,0 +1,47 @@
+.Menu{
+    position: absolute; 
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    width: 300px;
+    left: 1400px;
+}
+
+.Menu div{
+    display: flex;
+    width: 150px;
+    align-items: center;
+}
+
+.buttonPlace{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.buttonPlace button{
+    width: 150px;
+}
+
+.Usericon{
+    width: 42px;
+    height: 42px;
+    top: 0px;
+    border-radius: 50%; 
+}
+
+.Menubutton {
+    position: relative;
+    padding: 0px;
+    height: 40px;
+    /* Smooth shadow */
+     
+    
+    }
+
+.Menubutton img{
+    max-width: 100%;
+    max-width: 100%;
+}

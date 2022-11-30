@@ -1,0 +1,58 @@
+
+.Main {
+        width: 1000px; 
+        height: 1000px; 
+        margin-left: 300px;
+        top: 10px;
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    
+    .MainInfo {
+        padding: 20px;
+        width: 1000px; 
+        max-height: 50%;
+        background: rgba(255,186,0);
+    }
+    
+    .Main h2 {
+        color:rgba(255, 255, 0);
+        flex: none; 
+        order: 0;
+        align-self: stretch; flex-grow: 0; margin: 0px 10px;
+
+    /* Акцент */
+    /* Inside Auto Layout */
+    
+    }
+
+
+    .MainList {
+        top: 20px;
+        margin-top: 25px;
+        padding: 20px;
+        background: rgba(255,186,0);
+        width: 100%; 
+        }
+    
+    .TopPage {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .TopPage div{
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 10px;
+}

@@ -1,0 +1,16 @@
+.product {
+    width: 235px;
+    margin-bottom: 45px;
+    margin-right: 1%;
+}
+
+.product div img {
+    width: 200px;
+    height: 225px;
+
+}
+
+.product h3{
+    width: 225px;
+    text-align: center;
+}
