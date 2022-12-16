@@ -1,0 +1,171 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "product.png",
+      "name": "RIO (709)",
+      "text": "шоколад, чернослив, цветочный мед",
+      "star": 4,
+      "price50": "982.80 РУБ",
+      "price100": "1490.80 РУБ",
+      "price250": "2180.60 РУБ"
+    },
+    {
+      "id": 2,
+      "image": "product.png",
+      "name": "OPIUM ORO (706)",
+      "text": "молочный шоколад, темная вишня, кедровый орех",
+      "star": 5,
+      "price50": "994.80 РУБ",
+      "price100": "2300.80 РУБ",
+      "price250": "3090.56 РУБ"
+    },
+    {
+      "id": 3,
+      "image": "product.png",
+      "name": "CAFE NOIR (602)",
+      "text": "орехи, шоколад, нуга",
+      "star": 3,
+      "price50": "482.80 РУБ",
+      "price100": "6510.80 РУБ",
+      "price250": "5123.60 РУБ"
+    },
+    {
+      "id": 4,
+      "image": "product.png",
+      "name": "MESTERO (705)",
+      "text": "шоколад, чернослив, цветочный мед",
+      "star": 1,
+      "price50": "722.80 РУБ",
+      "price100": "2837.80 РУБ",
+      "price250": "2918.60 РУБ"
+    },
+    {
+      "id": 5,
+      "image": "product.png",
+      "name": "DESIRE RED (603)",
+      "text": "шоколад, карамель, коньяк",
+      "star": 5,
+      "price50": "982.80 РУБ",
+      "price100": "1240.80 РУБ",
+      "price250": "2470.60 РУБ"
+    },
+    {
+      "id": 6,
+      "image": "product.png",
+      "name": "INCANTO (604)",
+      "text": "орехи, шоколад, нуга",
+      "star": 2,
+      "price50": "926.80 РУБ",
+      "price100": "1419.80 РУБ",
+      "price250": "2580.60 РУБ"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "auth_email": "ksenia@mail.ru",
+      "auth_pass": "123"
+    },
+    {
+      "auth_email": "ksenia@djvnksd.dkjcns",
+      "auth_pass": "12345",
+      "id": 2
+    },
+    {
+      "auth_email": "ksenia@djvnksd.dkjcns",
+      "auth_pass": "12345",
+      "id": 3
+    },
+    {
+      "auth_email": "ksenia@mail.com",
+      "auth_pass": "123456",
+      "id": 4
+    },
+    {
+      "auth_email": "ksenia@mail.com",
+      "auth_pass": "123456",
+      "id": 5
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 6
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 7
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 8
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 9
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 10
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 11
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 12
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 13
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 14
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 15
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 16
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 17
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 18
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 19
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 20
+    },
+    {
+      "auth_email": "fsdc1@mail.ru",
+      "auth_pass": "123456789",
+      "id": 21
+    }
+  ]
+}
