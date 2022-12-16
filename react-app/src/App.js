@@ -5,10 +5,11 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import React from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Report from "./pages/Report";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <div>
               <Routes>
                   <Route path="/" element={<Home/>} />
+                  <Route path="/report" element={<Report/>}/>
               </Routes>
           </div>
           <Footer/>

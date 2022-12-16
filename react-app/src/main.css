@@ -200,3 +200,31 @@ div.report-form-holder{
 main.report_main_content{
   background-color: #00174a;
 }
+textarea {
+    resize: none;
+}
+form.report-form{
+    text-align: center;
+    margin: 0 auto;
+}
+div.report-form-holder{
+    width: 50%;
+    background-color: #0a58ca;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+input.email{
+    width: 80%;
+}
+textarea.report_message{
+    width: 80%;
+}
+button.report-send-button{
+    width: 10%;
+    background-color: cyan;
+    border-color: royalblue;
+}
+main.report_main_content{
+    background-color: #00174a;
+}
