@@ -1,0 +1,143 @@
+version: '3.9'
+
+
+services:
+    server:
+        build:
+            context: ./server/
+        command: npm run dev
+        restart: unless-stopped
+        environment:
+            - DATABASE_DB=discord
+            - DATABASE_USER=root
+            - DATABASE_PASSWORD=123)Masha
+            - DATABASE_HOST=mysqldb
+            - DATABASE_PORT=3306
+        stdin_open: true
+        ports:
+            - '4000:4000'
+        volumes:
+            - ./server:/discord
+            - /discord/node_modules
+        depends_on:
+            - db
+        links:
+            - db
+    db:
+        image: mysql
+        restart: unless-stopped
+
+        volumes:
+            - db-data:/var/lib/mysql
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=123)Masha
+            - MYSQL_DATABASE=discord
+            - MYSQL_ROOT_PASSWORD=123)Masha
+        ports:
+            - "3306:3306"
+    frontend:
+        build:
+            context: clientJS
+        ports:
+            - 3000:3000
+        volumes:
+            - ./clientJS:/discord
+            - /discord/node_modules
+
+        depends_on:
+            - server
+
+volumes:
+    back-notused:
+    db-data:
+
+
+#secrets:
+#    db-password:
+#        file: db/password.txt
+
+
+#работает бэк фронт без бд
+#services:
+#    server:
+#        build:
+#            context: ./server/
+#        command: npm run dev
+#        ports:
+#            - '4000:4000'
+#        volumes:
+#            - ./server:/discord
+#            - /discord/node_modules
+#
+#    clientJS:
+#        build:
+#            context: ./clientJS/
+##        command: npm start
+#        ports:
+#            - '3000:3000'
+#        volumes:
+#            - ./clientJS:/discord
+#            - /discord/node_modules
+#        depends_on:
+#            - server
+#
+#
+
+
+#    mysqldb:
+#        image: mysql
+#        restart: unless-stopped
+#        env_file: ./.env
+#        environment:
+#            MYSQL_ROOT_PASSWORD: 1111
+#            MYSQL_DATABASE: discord
+#        ports:
+#            - "3306:3333"
+#        volumes:
+#            - db:/var/lib/mysql
+#
+#    server:
+#        depends_on:
+#            - mysqldb
+#        container_name: server
+#        build:
+#            dockerfile: Dockerfile
+#        env_file: ./.env
+#        ports:
+#            -   "3333:3001"
+#        environment:
+#            - DB_HOST=mysqldb
+#            - DB_USER=$MYSQLDB_USER
+#            - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+#            - DB_NAME=$MYSQLDB_DATABASE
+#            - DB_PORT=$MYSQLDB_DOCKER_PORT
+#        restart: unless-stopped
+#        stdin_open: true
+#        tty: true
+#
+#volumes:
+#    db:
+#services:
+#    server:
+#        container_name: server
+#        build:
+#            dockerfile: Dockerfile
+#        ports:
+#            -   "3333:3001"
+#        restart: unless-stopped
+#
+#    mysqldb:
+#        image: mysql
+#        restart: unless-stopped
+#        env_file: ./.env
+#        environment:
+#            MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+#            MYSQL_DATABASE: $MYSQL_DATABASE
+#        ports:
+#            - "3306:3333"
+#        volumes:
+#            - db-config:/etc/mysql
+#            - db-data:/var/lib/mysql
+#            - ./db/backup/files/:/data_backup/data
+#docker-compose up -d --no-deps --build server
