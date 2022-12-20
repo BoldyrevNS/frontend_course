@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from '../img/logo.png';
 import search_icon from '../img/search_icon.png';
+import upload_icon from '../img/upload_icon.png';
+import settings_icon from '../img/settings_icon.png';
+import report_icon from '../img/report_icon.png';
 const Header = () => {
     return (
         <header>
@@ -22,6 +25,24 @@ const Header = () => {
                                 <a className="nav-link" href="/">
                                     <img src={search_icon}/>
                                          Поиск
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">
+                                    <img src={upload_icon}/>
+                                        Загрузить
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">
+                                    <img src={settings_icon}/>
+                                        Настройки
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/report">
+                                    <img src={report_icon}/>
+                                    Жалоба
                                 </a>
                             </li>
                         </ul>
