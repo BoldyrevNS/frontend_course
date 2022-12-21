@@ -1,7 +1,7 @@
 import React from 'react';
 import RepSuccess from "./RepSuccess";
 import Axios from "axios";
-async function sendEvent(email, report, setSent){
+async function sendEvent(email:string, report:string, setSent:(state:boolean)=>void){
     const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@']+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
     if(report.length>0) {
         if (email.match(EMAIL_REGEXP)) {
@@ -30,10 +30,10 @@ const Report = () => {
     const [email, setEmail] = React.useState("");
     const [report_message, setMessage] = React.useState("");
     const [sent, setSent] = React.useState(false);
-    const handleEmailChange = (e) => {
+    const handleEmailChange = (e:any) => {
         setEmail(e.target.value)
     }
-    const handleMessageChange = (e) => {
+    const handleMessageChange = (e:any) => {
         setMessage(e.target.value)
     }
     return (
