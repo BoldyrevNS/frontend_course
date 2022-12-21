@@ -1,26 +1,40 @@
+
 import React from 'react';
 import RepSuccess from "./RepSuccess";
-import {render} from "react-dom";
 import Axios from "axios";
-async function sendEvent(email, report){
-    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@']+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-    if(report.length>0) {
+
+
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@']+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+
+async function sendEvent (email, reportMessage, setResult){
+    if(reportMessage.length) {
         if (email.match(EMAIL_REGEXP)) {
-            const req = await fetch('https://lr/api/account/check_email/'+email)
-                .then(response => response.json());
-            if (req === 1) {
+            console.log("sending...");
+            let emailIsInDB;
+            await Axios.get('https://lr/api/account/check_email/'+email)
+                .then(function (response){
+                    console.log("response.data = " + response.data);
+                    if(response.data === 1) {
+                        emailIsInDB = 1;
+                        setResult(true);
+                    }
+                    else alert("Нет пользователя с таким почтовым адресом!");
+                });
+            console.log("emailIsInDB = " + emailIsInDB);
+            if(emailIsInDB===1) {
                 await Axios.post('https://lr/api/report/save_report', {
                         email: email,
-                        report_message: report
+                        report_message: reportMessage
                     },
                     {
                         headers: {
                             'Content-Type': 'application/json'
                         }
                     });
-                render(<RepSuccess/>, document.getElementById('report_main'));
+
+
             }
-            else alert("Нет пользователя с таким почтовым адресом!");
         }
         else alert("Некорректный почтовый адрес!");
     }
@@ -28,17 +42,23 @@ async function sendEvent(email, report){
 }
 
 const Report = () => {
+    const [sent, setSent] = React.useState(false);
     const [email, setEmail] = React.useState("");
     const [report_message, setMessage] = React.useState("");
+
     const handleEmailChange = (e) => {
         setEmail(e.target.value)
     }
+
     const handleMessageChange = (e) => {
         setMessage(e.target.value)
     }
+
+
     return (
         <div>
             <main className="report_main_content" id="report_main">
+                {sent && <RepSuccess/>}
                 <div className="report-form-holder">
                     <form className="report-form">
                         <p>
@@ -47,7 +67,7 @@ const Report = () => {
                         <p>
                             <textarea className="report_message" name="report_message" cols={40} rows={20} placeholder="Ваша жалоба" value={report_message} onChange={handleMessageChange}/>
                         </p>
-                        <button className="report-send-button" type="button" onClick={()=>sendEvent(email,report_message)}>
+                        <button className="report-send-button" type="button" onClick={sendEvent(email, report_message, setSent)}>
                             <b>Отправить</b>
                         </button>
                     </form>

@@ -10,6 +10,7 @@ import React from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Report from "./pages/Report";
+import RepSuccess from "./pages/RepSuccess";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Routes>
                   <Route path="/" element={<Home/>} />
                   <Route path="/report" element={<Report/>}/>
+                  <Route path="/rep_success" element={<RepSuccess/>}/>
               </Routes>
           </div>
           <Footer/>
