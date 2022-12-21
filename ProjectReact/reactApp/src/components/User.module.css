@@ -1,0 +1,77 @@
+.user{
+    width: 45%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(17, 17, 17);
+    margin: 2% 0;
+    border-radius: 16px;
+    box-shadow: 0px 6px 0 -1px rgb(5, 5, 5);
+}
+.user img{
+    width: 50%;
+    border-radius: 50%;
+}
+.user h1{
+    font-size: 26px;
+    padding: 8px 0;
+    font-weight: 700;
+}
+.user p{
+    font-size: 26px;
+    padding: 0 8px;
+}
+.user p span{
+    font-size: 16px;
+}
+.status{
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0 1%;
+}
+.user_followes{
+    height: 30px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.user_followes p{
+    font-size: 16px;
+    padding: 0 8px;
+}
+.user_following{
+    height: 30px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0 1%;
+}
+.user_following p{
+    font-size: 16px;
+    padding: 0 8px;
+}
+a{
+   background-color: rgb(255, 123, 0);
+   opacity: 8;
+   width: 45%;
+   height: 40px;
+   text-align: center;
+   padding: 8px 0;
+   color: #ffffff;
+   border-radius: 8px;
+   transition: 0.8 ease-in-out;
+}
+a:hover{
+   background-color: red;
+}

@@ -1,0 +1,12 @@
+.app{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.app h1{
+    text-align: center;
+    padding:4px 0;
+    color: #ffffff;
+}
