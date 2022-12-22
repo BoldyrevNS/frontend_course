@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  postgres_db:
+    image: postgres:12.13
+    container_name: postgres_database
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+
+  aiohttp_server:
+    build: ./server
+    container_name: aiohttp_server
+    depends_on:
+      - postgres_db
+    env_file:
+      - .env
+    restart: on-failure
+    ports:
+      - "8081:8080"
+
+  web:
+    build: ./nginx
+    container_name: web-nginx
+    depends_on:
+      - aiohttp_server
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    ports:
+      - "8080:80"
+
+  
+
+volumes:
+  postgres_data:

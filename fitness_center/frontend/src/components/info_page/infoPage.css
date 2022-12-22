@@ -1,0 +1,34 @@
+.info-page {
+    width: 80%;
+    align-content: center;
+    margin: auto;
+}
+
+.info-page .title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.info-page .text {
+    font-size: 20px;
+}
+
+.info-page .text .button-add{
+    margin-top: 200px;
+    text-align: center;
+}
+
+.info-page .description {
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-page .description .image {
+    width: 75%;
+}

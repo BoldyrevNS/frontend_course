@@ -1,0 +1,28 @@
+.element {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.element .element-title {
+    margin: 5px 0;
+    font-size: 24px;
+}
+
+.element .element-description {
+    padding: 3px;
+    font-size: 18px;
+}
+
+.element .image {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.element .image .personalImage {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}

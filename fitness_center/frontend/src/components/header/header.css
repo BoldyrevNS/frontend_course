@@ -1,0 +1,25 @@
+header {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    color: #fff;
+    height: 60px;
+    flex: 0 0 auto;
+}
+
+header .container {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+header .container .navbar-brand {
+    margin-right: 10px;
+}
+
+header .container .navbar-item {
+    color: #ccc;
+}

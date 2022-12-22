@@ -1,0 +1,5 @@
+aiohttp == 3.8.3
+aiohttp_cors == 0.7.0
+aiopg == 1.4.0
+sqlalchemy == 1.4.43
+pyjwt == 2.6.0

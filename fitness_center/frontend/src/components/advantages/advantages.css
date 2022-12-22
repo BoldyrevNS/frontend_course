@@ -1,0 +1,17 @@
+.advantages-page {
+    width: 80%;
+    align-content: center;
+    margin: auto;
+}
+
+.advantages-page .title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.advantages-page .container {
+    margin-bottom: 20px;
+}
