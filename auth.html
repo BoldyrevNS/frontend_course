@@ -6,7 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/app.css">
-    <script src="https://kit.fontawesome.com/2872919899.js" crossorigin="anonymous"></script>
     <title>Главная</title>
 </head>
 <body>
@@ -103,12 +102,12 @@
             <div class="auth-container">
                 <form class="auth">
                     <div class="auth-item">
-                        <label>Логин</label>
-                        <input class="auth-input" type="text">
+                        <label for="InputLogin">Логин</label>
+                        <div class="loginField"><input type="text" class="auth-input" id="InputLogin"></div>
                     </div>
                     <div class="auth-item">
-                        <label>Пароль</label>
-                        <input class="auth-input" type="text">
+                        <label for="InputPassword">Пароль</label>
+                        <div class="passwordField"><input class="auth-input" id="InputPassword" type="text"></div>
                     </div>
                     <button class="auth-button" type="submit">Войти</button>
                 </form>
@@ -182,5 +181,5 @@
     </footer>
 </main>
 </body>
-<script src="js/index.js"></script>
+<script src=./js/auth.js></script>
 </html>
