@@ -3,6 +3,7 @@ import {User} from "../data/User";
 
 const authenticationBasePath: string = 'http://localhost:8080/authentication';
 const refreshBasePath: string = 'http://localhost:8080/refresh';
+const isTokenValidPath: string = 'http://localhost:8080/check-token';
 
 export function getAuth_(resultHandler: (data: any) => void, errorHandler: (data: any) => void, login: string, password: string) {
 
@@ -46,7 +47,6 @@ export function postAuth_(resultHandler: (data: any) => void, errorHandler: (dat
 
 }
 
-
 export function getRefresh_() {
     const token = localStorage.getItem('refresh_token')
     return Axios.get(refreshBasePath,
@@ -68,10 +68,33 @@ export function getRefresh_() {
 
 }
 
+export function checkToken_() {
+
+    const token = localStorage.getItem('token')
+    return Axios.get(isTokenValidPath,
+        {
+            headers: { 'Authorization': ''+ token},
+            responseType: 'json'
+        }
+    ).then
+    (r => {
+        return r.data;
+    })
+        .catch((error: AxiosError) => {
+            if(error.response!.status === 401){
+                return AuthApi.getRefresh();
+            }
+            alert(error.message);
+            return null;
+        });
+
+}
+
 const AuthApi = {
     getAuth: getAuth_,
     postAuth: postAuth_,
-    getRefresh: getRefresh_
+    getRefresh: getRefresh_,
+    checkToken: checkToken_
 }
 
 export default AuthApi;

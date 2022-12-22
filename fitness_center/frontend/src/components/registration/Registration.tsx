@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate, NavigateFunction } from "react-router-dom";
 import {User} from "../../data/User";
 import AuthApi from "../../api/AuthApi";
+import './registration.css'
 
 function Registration() {
     const navigate:NavigateFunction = useNavigate();
@@ -21,7 +22,6 @@ function Registration() {
             navigate('/profile')
 
         },
-        // eslint-disable-next-line
         [user]
     );
 
@@ -45,7 +45,6 @@ function Registration() {
         }
         if (login !== '' && password !== '') {
             AuthApi.postAuth(setUser, setError, login, password)
-            //localStorage.setItem('login', login)
         }
     }
 
@@ -66,34 +65,34 @@ function Registration() {
 
     return (
         <React.Fragment>
-            <main className="container">
-                <section className="reg-form mb-3">
+            <main className="registration">
+                <section className="reg-form">
                     <div className="title">
                         <h1>Регистрация</h1>
                     </div>
-                    <form className="mt-4" method="post">
-                        <div className="mb-4">
+                    <form method="post">
+                        <div className="text">
                             <div><label>Логин</label></div>
-                            <div><input type="text" className="w-100" name="login" required onChange={evt => handleLogin(evt)} /></div>
-                            {(isPressed && login === '') && <div className="errors">Заполните "Логин"</div>}
+                            <div><input type="text" className="text-input" name="login" required onChange={evt => handleLogin(evt)} /></div>
+                            {(isPressed && login === '') && <div className="errors">заполните поле</div>}
                         </div>
-                        <div className="mb-4">
+                        <div className="text">
                             <div><label>Пароль</label></div>
-                            <div><input type="password" className="w-100" name="password" required onChange={evt => handlePassword(evt)} /></div>
-                            {(isPressed && password === '') && <div className="errors">Введите пароль</div>}
+                            <div><input type="password" className="text-input" name="password" required onChange={evt => handlePassword(evt)} /></div>
+                            {(isPressed && password === '') && <div className="errors">введите пароль</div>}
                         </div>
-                        <div className="mb-4">
+                        <div className="text">
                             <div><label>Повторите пароль</label></div>
-                            <div><input type="password" className="w-100" name="password-copy" required onChange={evt => setPasswordCopy(evt.target.value)} /></div>
-                            {(isPressed && password === '') && <div className="errors">Повторите пароль</div>}
-                            {(password !== passwordCopy) && <div className="errors">Пароли не совпадают</div>}
+                            <div><input type="password" className="text-input" name="password-copy" required onChange={evt => setPasswordCopy(evt.target.value)} /></div>
+                            {(isPressed && password === '') && <div className="errors">повторите пароль</div>}
+                            {(password !== passwordCopy) && <div className="errors">пароли не совпадают</div>}
                         </div>
                         {error !== null &&
-                            <div className="mb-2 reg-tip">
+                            <div className="reg-tip">
                                 <div className="errors">Что-то пошло не так!</div>
                             </div>
                         }
-                        <div className="mb-4">
+                        <div className="btn-container pointer-events-auto ml-8 rounded-md bg-black py-2 px-3 text-[0.9rem] font-semibold leading-5 text-white hover:bg-gray-900">
                             <button type="submit" onClick={(event)=>handleSubmit(event)} className="btn button-default btn-reg">Зарегистрироваться</button>
                         </div>
                     </form>

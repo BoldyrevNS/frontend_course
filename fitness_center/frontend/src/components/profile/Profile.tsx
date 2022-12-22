@@ -1,28 +1,23 @@
 import {NavigateFunction, useLocation, useNavigate} from "react-router-dom";
 import React from "react";
-import {checkToken} from "../../api/TokenApi";
 import {LoginData} from "../../data/LoginData";
+import './profile.css'
+import AuthApi from "../../api/AuthApi";
 
 
 function Profile() {
     const [login, setLogin] = React.useState<string>('');
     const navigate: NavigateFunction = useNavigate();
 
-    //let item = localStorage.getItem('login');
-    //if (item !== null) {
-    //    setLogin(item)
-    //}
-
     function HandleMouseEvent(){
         navigate('/login');
         localStorage.setItem('token', '');
         localStorage.setItem('refresh_token', '');
-        //localStorage.setItem('login', '')
     }
 
     React.useEffect(() => {
             const get_token = async () => {
-                const result: LoginData | null | true = await checkToken();
+                const result: LoginData | null | true = await AuthApi.checkToken();
                 console.log(result);
                 if (result === true) {
                     get_token();
@@ -34,23 +29,23 @@ function Profile() {
             }
             get_token()
         },
-        // eslint-disable-next-line
         []
     );
 
     return (
         <React.Fragment>
-            <main className="container">
-                <section className="profile-list">
-                    <div className="profile-title mb-3">
-                        Это ваш профиль
-                    </div>
-                    <div className="profile-title mb-3">
-                        Имя пользователя
-                        {login}
-                    </div>
+            <main className="profile">
+                <div className="title">
+                    Профиль
+                </div>
+                <div className="name">
+                    Имя пользователя:
+                    {login}
+                </div>
+                <div
+                    className="button-exit pointer-events-auto ml-8 rounded-md bg-black py-2 px-3 text-[0.9rem] font-semibold leading-5 text-white hover:bg-gray-900">
                     <button type="submit" onClick = {() =>HandleMouseEvent()} className="btn button-default btn-unlogin">Выйти</button>
-                </section>
+                </div>
             </main>
         </React.Fragment>
     );

@@ -1,0 +1,72 @@
+.login {
+    width: 80%;
+    align-content: center;
+    margin: 30px auto;
+}
+
+.login-form{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.login .title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login .text {
+    font-size: 18px;
+    text-align: center;
+}
+
+.login .text-input {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.btn-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.login-form .errors {
+    font-size: 14px;
+    color: red;
+}
+
+.reg-tip{
+    align-items: center;
+    position: relative;
+    padding: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-link{
+    text-decoration: none;
+    color: black;
+}
+
+.reg-link:hover{
+    color: gray;
+}

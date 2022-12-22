@@ -2,7 +2,7 @@ import {Link, NavigateFunction, useNavigate} from "react-router-dom";
 import React from "react";
 import {User} from "../../data/User";
 import AuthApi from "../../api/AuthApi";
-
+import './login.css'
 
 function Login() {
     const navigate: NavigateFunction = useNavigate();
@@ -20,7 +20,6 @@ function Login() {
             localStorage.setItem('refresh_token', user.refresh_token);
             navigate('/profile')
         },
-        // eslint-disable-next-line
         [user]
     );
 
@@ -31,7 +30,6 @@ function Login() {
         setPressed(true)
         if (login !== '' && password !== '') {
             AuthApi.getAuth(setUser, setError, login, password)
-            //localStorage.setItem('login', login)
         }
     }
 
@@ -48,31 +46,29 @@ function Login() {
     return (
         <React.Fragment>
 
-            <main className="container">
-                <section className="login-form mb-3">
-                    <div className="title">
-                        <h1>Авторизация</h1>
-                    </div>
-                    <form className="mt-4" method="post">
-                        <div className="mb-4">
+            <main className="login">
+                <section className="login-form">
+                    <div className="title"> Авторизация </div>
+                    <form method="post">
+                        <div className="text">
                             <div><label>Логин</label></div>
-                            <div><input type="text" className="w-100" name="login" required onChange={evt => handleLogin(evt)} /></div>
-                            {(isPressed && login === '') && <div className="errors">Заполните "Логин"</div>}
+                            <div><input type="text" className="text-input" name="login" required onChange={evt => handleLogin(evt)} /></div>
+                            {(isPressed && login === '') && <div className="errors">заполните поле</div>}
                         </div>
-                        <div className="mb-4">
+                        <div className="text">
                             <div><label>Пароль</label></div>
-                            <div><input type="password" className="w-100" name="password" required onChange={evt => handlePassword(evt)} /></div>
-                            {(isPressed && password === '') && <div className="errors">Заполните "Пароль"</div>}
+                            <div><input type="password" className="text-input" name="password" required onChange={evt => handlePassword(evt)} /></div>
+                            {(isPressed && password === '') && <div className="errors">заполните поле</div>}
                         </div>
                         {error !== null &&
-                            <div className="mb-2 reg-tip">
+                            <div className="reg-tip">
                                 <div className="errors">Неверный логин или пароль!</div>
                             </div>
                         }
-                        <div className="mb-2">
+                        <div className="btn-container pointer-events-auto ml-8 rounded-md bg-black py-2 px-3 text-[0.9rem] font-semibold leading-5 text-white hover:bg-gray-900">
                             <button type="submit" onClick={(event) => handleSubmit(event)} className="btn button-default btn-login">Войти</button>
                         </div>
-                        <div className="mb-2 reg-tip">
+                        <div className="reg-tip">
                             <Link className='reg-link' to='/registration'>Нет аккаунта? Зарегистрируйтесь!</Link>
                         </div>
                     </form>
@@ -81,7 +77,5 @@ function Login() {
         </React.Fragment>
     );
 }
-
-
 
 export default Login;

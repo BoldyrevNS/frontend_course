@@ -1,7 +1,7 @@
 import {NavigateFunction, useLocation, useNavigate} from "react-router-dom";
 import React from "react";
 import "./infoPage.css"
-import {checkToken} from "../../api/TokenApi";
+import AuthApi from "../../api/AuthApi";
 
 
 export function InfoPage() {
@@ -17,7 +17,7 @@ export function InfoPage() {
             }
 
             const get_token: any | null | true = async () => {
-                const result = await checkToken();
+                const result = await AuthApi.checkToken();
                 console.log(result);
                 if (result === true) {
                     get_token();
@@ -30,7 +30,6 @@ export function InfoPage() {
             }
             get_token()
         },
-        // eslint-disable-next-line
         [isNeedToCheckToken]
     );
 

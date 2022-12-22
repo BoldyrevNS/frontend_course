@@ -1,0 +1,53 @@
+.registration {
+    width: 80%;
+    align-content: center;
+    margin: 30px auto;
+}
+
+.registration .title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.reg-form {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.btn-reg {
+    margin-bottom: auto;
+}
+
+.reg-form .errors {
+    font-size: 14px;
+    color: red;
+}
+
+.registration .text {
+    font-size: 18px;
+    text-align: center;
+}
+
+.registration .text-input {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
