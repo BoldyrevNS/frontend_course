@@ -1,11 +1,13 @@
-export function PageContent() {
+import MangaData from "../models/Manga";
+
+export function PageContent(props:MangaData) {
     return <>
         <div className="page_content">
-            <h4 className="page_text">Милый дом</h4>
-            <p className="page_text">Sweet Home</p>
+            <h4 className="page_text">{props.name_ru}</h4>
+            <p className="page_text">{props.name_en}</p>
             <div className="page_info">
                 <p className="page_text">Информация</p>
-                <p className="page_text">Много ли для счастья надо хикикомори? Знай себе в четырех стенах сиди, остальных нахрен посылай и в один комп вникай. А что родители с сестренкой внезапно померли? Так и чёрт с ними, оставили после себя «копейки»: пришлось в дешевую общагу переехать, жить на фастфуде и даже день Х назначить, чтоб delete-нуться из этого мира. Только не знал наш герой, что не суждено ему сдохнуть человеческими методами, ибо, как говорится, «ночь темна и полна ужасов», а днем и тем паче — не забалуешь.</p>
+                <p className="page_text">{props.info}</p>
             </div>
         </div>
     </>

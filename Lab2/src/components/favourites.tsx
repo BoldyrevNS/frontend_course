@@ -1,13 +1,14 @@
 import '../css/catalog.css';
 import { Card } from './card';
 import React from 'react';
-import { getMangas } from '../api/MangaApi';
+import { getMangas, getUserMangas, postManga } from '../api/MangaApi';
 import MangaData from '../models/Manga';
 
-export function Catalog() {
+export function Favourites() {
     const [manga, setManga] = React.useState<[MangaData]>()
+
     React.useEffect(()=>{
-        getMangas(setManga)
+        getUserMangas(setManga)
     },[])
     return <>
         <main>
@@ -15,7 +16,7 @@ export function Catalog() {
             <div className="catalog">
 
                 <div className="title">
-                    Каталог
+                    Избранное
                 </div>
 
                 <div className="content row">

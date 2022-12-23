@@ -1,0 +1,13 @@
+requests
+django
+django-cors-headers
+django-filter
+django-extensions
+django-compat
+psycopg2
+drf-yasg
+dj-database-url
+djangorestframework
+djangorestframework-simplejwt
+dj-rest-auth
+django-allauth

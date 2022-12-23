@@ -1,11 +1,14 @@
 import 'bootstrap/js/dist/collapse';
 import 'bootstrap/js/dist/dropdown';
+import React from 'react';
 import { Link } from 'react-router-dom'
 import '../css/header.css'
+import authContext from './AuthContext';
 
 
 export function Header(){
 
+    const isLogin = React.useContext(authContext);
     return <><header>
               
     <nav className="navbar navbar-expand-lg">
@@ -54,14 +57,34 @@ export function Header(){
                     </a>  
                   </li>
 
-                  <li className="navbar-item">
-                      <a className="nav-link" href="./login.html">Вход</a>
-                  </li>
-                  
-                  <li className="navbar-item">
-                      <a className="nav-link" href="./signup.html">Регистрация</a>
-                  </li>
+                  { isLogin?.isAuth &&
+                      <li className="navbar-item">
+                          <Link className="nav-link" to={'/favourites'}>Избранное</Link>
+                      </li>
+                  }
 
+                  { !isLogin?.isAuth &&
+                      <li className="navbar-item">
+                          <Link className="nav-link" to={'/login'}>Вход</Link>
+                      </li>
+                  }
+                  
+                  { !isLogin?.isAuth &&
+                      <li className="navbar-item">
+                          <a className="nav-link" href="./signup.html">Регистрация</a>
+                      </li>
+                  }
+                  
+                  { isLogin?.isAuth &&
+                    <li className="navbar-item">
+                      <Link className="nav-link" to='/login' onClick={
+                          ()=>{
+                              localStorage.clear()
+                              isLogin.setAuth(false)
+                          }
+                          }>Выход</Link>
+                    </li>
+                  }
               </ul>
           </div>
 
