@@ -6,7 +6,8 @@ class First {
     constructor(arr: any) {
         this.arr = arr;
     }
-    _exec(): any{
+
+    _exec(): any {
         return typeof this.arr[0]
     }
 }
