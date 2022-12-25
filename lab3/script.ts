@@ -1,6 +1,6 @@
 // npx tsc
 
-class First{
+class First {
     private readonly arr: Array<any>
 
     constructor(arr: any) {
@@ -9,7 +9,6 @@ class First{
     _exec(): any{
         return typeof this.arr[0]
     }
-
 }
 
 const stringArray: Array<string> = ['a', 'b', 'c']
