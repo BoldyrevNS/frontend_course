@@ -1,0 +1,87 @@
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 80px 0px;
+    background-color:rgb(228, 152, 75);
+    
+
+    .mainPageView{
+        display: flex;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            background-color: rgb(54, 68, 82);
+            text-decoration: none;
+            color: aliceblue;
+            padding: 9px 16px;
+            font-weight: 700;
+            font-size: 20px;
+            border-radius: 10px;    
+            transition: background-color 0.3sa linear;
+        }
+
+        button:hover {
+            background-color: rgb(22, 29, 37);
+        }
+    }
+}
+
+.container {
+    margin: 0px 100px;
+}
+
+.cardsHolder {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    z-index: 5;
+    box-shadow: 10px 10px 40px 20px #0000001A;
+    width: 25%;
+    margin-right: 3%;
+    margin-top: -10%;
+    padding: 2% 3%;
+    background-color: aliceblue;
+}
+
+.cardImage{
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.cardImg {
+    width: 30%;
+}
+
+.cardTitle {
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+
+.cardText {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+}
