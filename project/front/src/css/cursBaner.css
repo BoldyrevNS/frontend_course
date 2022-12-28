@@ -1,0 +1,43 @@
+.cur {
+    animation: 1000ms ease-out;
+    width: 23.75%;
+    
+    border-radius: 25px;
+    margin: 1% 0px 0px 1%;
+    border: solid 1px #1a73e8;
+
+}
+
+
+.cur img {
+border-radius: 25px;
+width: 100%;
+max-height: 28vh;
+overflow: auto;
+}
+
+.curs-name{
+    padding-left: 15px;
+    font-weight: bold;
+    display: flex;
+    color: #000000;
+    text-decoration: none;
+    word-break:break-all;
+}
+
+.curs-disc{
+    padding-left: 15px;
+    max-width:100%;
+    color: rgb(100, 100, 100);
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+.home-curs-link{
+    color: #000000;
+    text-decoration: none;
+}
+.home-curs-link:hover{
+    color: #000000;
+    text-decoration: none;
+}

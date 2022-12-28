@@ -1,0 +1,36 @@
+.sub-header nav{
+    padding: 0px;
+  }
+  .sub-header nav ul {
+      display: flex;
+      list-style: none;
+      color: #1a73e8;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .sub-header nav ul li {
+      font-weight: bold;
+      padding: 25px  0px 0px 25px;
+  }
+
+
+  .main-img{
+    min-width: 95%;
+    max-height: 70vh;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 100px;
+  }
+
+  .curs-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont {
+    max-width: 1920px;
+    min-width: 360px;
+    margin: 0 auto;
+}
+

@@ -1,0 +1,47 @@
+.container {
+        
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.task-title{
+  display:flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px rgb(205, 205, 205);
+  border-radius: 15px;
+  font-weight: bold;
+  padding: 35px;
+  padding-left: 45px;
+  padding-right: 45px;
+  word-break:break-all;
+}
+
+.task-text{
+font-size: 20px;
+width: 100%;
+border: solid 1px rgb(205, 205, 205);
+border-radius: 15px;
+font-weight: bold;
+padding: 35px;
+padding-left: 45px;
+padding-right: 45px;
+margin-top: 10px;
+margin-bottom: 10px;
+word-wrap: break-word;
+}
+
+.curs-autor{
+    text-decoration: none;
+    color:rgb(151, 150, 252);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end
+}
+
+.curs-autor-link{
+    text-decoration: none;
+    
+}

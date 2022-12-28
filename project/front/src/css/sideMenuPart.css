@@ -1,0 +1,29 @@
+.side-bar-part{
+    text-align: left;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px;
+    padding-left: 40px;
+    min-width: 80%;
+    margin: 20px;
+    overflow-x:hidden;
+    margin-left: -20px;
+    
+}
+
+.side-bar-link{
+    color: #000000;
+    text-decoration: none;
+}
+.side-bar-link:hover{
+    color: #000000;
+    text-decoration: none;
+}
+
+.side-bar-part:hover,
+.side-bar-part:focus {
+    background-color: rgb(205, 205, 205);
+    text-decoration: none;
+    
+  }
